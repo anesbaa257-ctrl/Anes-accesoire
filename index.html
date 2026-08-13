@@ -38,7 +38,7 @@
   <p>تصميم أنيق ومتين من الفولاذ المقاوم للصدأ - متوفرة الآن في الجزائر</p>
   
   <!-- الصورة الرئيسية - الصورة الأولى التي أرسلتها -->
-  <img class="hero-img" src="https://i.ibb.co/3WqP77B/image-13.png" alt="ساعة SKMEI الفاخرة">
+  <img class="hero-img" src="watch1.png" alt="ساعة SKMEI الفاخرة">
   
   <div class="price">2,900 د.ج <span class="old-price">4,500 د.ج</span></div>
   <a href="#order" class="cta">اطلب الآن - التوصيل سريع</a>
@@ -51,20 +51,20 @@
 
   <h2>لماذا تختار هذه الساعة؟</h2>
   <div class="features">
-    <div class="feature-card"><h3>💧 مقاومة للماء</h3><p>مقاومة للماء والأنشطة اليومية.</p></div>
+    <div class="feature-card"><h3>💧 مقاومة للماء</h3><p>مقاومة للماء والأنشطة اليومية بكفاءة عالية.</p></div>
     <div class="feature-card"><h3>🛡️ فولاذ مقاوم للصدأ</h3><p>هيكل متين من الإستانلس ستيل.</p></div>
   </div>
 
   <h2>معرض الصور الحقيقية للمنتج</h2>
   <div class="gallery">
     <!-- الصورة الثانية -->
-    <img src="https://i.ibb.co/L9sM6m9/image-14.png" alt="تفاصيل الساعة">
+    <img src="watch2.png" alt="تفاصيل الساعة">
     <!-- الصورة الثالثة -->
-    <img src="https://i.ibb.co/N1W8T9v/image-15.png" alt="الساعة في اليد">
+    <img src="watch3.png" alt="الساعة في اليد">
     <!-- الصورة الرابعة -->
-    <img src="https://i.ibb.co/P4qF4Q1/image-16.png" alt="واجهة الساعة">
+    <img src="watch4.png" alt="واجهة الساعة">
     <!-- تكرار الصورة الأولى كصورة أخيرة للمعرض -->
-    <img src="https://i.ibb.co/3WqP77B/image-13.png" alt="ساعة SKMEI">
+    <img src="watch1.png" alt="ساعة SKMEI">
   </div>
 
   <section id="order">
@@ -79,9 +79,12 @@
       <label>الولاية *</label>
       <select id="wilaya" required>
         <option value="">اختر الولاية</option>
-        <option value="الجزائر">الجزائر</option>
-        <option value="وهران">وهران</option>
-        <option value="قسنطينة">قسنطينة</option>
+        <option value="16">16 - الجزائر</option>
+        <option value="31">31 - وهران</option>
+        <option value="25">25 - قسنطينة</option>
+        <option value="19">19 - سطيف</option>
+        <option value="09">09 - البليدة</option>
+        <!-- يمكنك إضافة باقي الولايات هنا -->
       </select>
 
       <button type="submit" id="submitBtn">تأكيد الطلب الآن</button>
@@ -104,7 +107,7 @@
     const formData = new FormData();
     formData.append('fullName', document.getElementById('fullName').value);
     formData.append('phone', document.getElementById('phone').value);
-    formData.append('wilaya', document.getElementById('wilaya').value);
+    formData.append('wilaya', document.getElementById('wilaya').options[document.getElementById('wilaya').selectedIndex].text);
 
     fetch(SCRIPT_URL, { method: 'POST', body: formData })
     .then(response => response.json())
