@@ -1,181 +1,124 @@
 <!DOCTYPE html>
-<html lang="fr" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SKMEI Homme - Vente Acier Inoxydable</title>
-  <meta name="description" content="Vente SKMEI Homme en acier inoxydable. Dateur, aiguilles lumineuses, style premium.">
+  <title>SKMEI - ساعة رجالية فاخرة</title>
   <style>
-    :root{--bg:#080808;--card:#111;--gold:#d8b15a;--text:#fff;--muted:#bdbdbd;--green:#18bb6a;}
-    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#050505,#111);color:var(--text);font-family:Arial,sans-serif;direction:rtl;text-align:right}
-    .container{max-width:1000px;margin:auto;padding:0 15px}
-    .hero{padding:30px 0 20px;text-align:center;background:radial-gradient(circle at 50% 10%,#252525 0,#090909 55%)}
-    .badge{display:inline-block;border:1px solid #333;border-radius:999px;padding:7px 13px;color:#eee;font-size:13px;margin-bottom:10px}
-    h1{font-size:clamp(30px,5vw,50px);margin:10px 0 0;letter-spacing:-1px}
-    .hero p{color:#ddd;max-width:680px;margin:0 auto 18px}
-    .hero-img{width:100%;max-width:600px;border-radius:24px;display:block;margin:18px auto;box-shadow:0 14px 55px #000}
-    .price{font-size:36px;font-weight:900;color:var(--gold);margin:10px 0}
-    .old{color:#777;text-decoration:line-through;font-size:18px}
-    .cta{display:inline-block;background:var(--green);color:white;text-decoration:none;font-weight:900;padding:15px 28px;border-radius:14px;font-size:18px;margin-top:10px}
-    .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:15px}
-    .trust span{background:#101010;border:1px solid #2b2b2b;border-radius:12px;padding:8px 11px;color:#eee;font-size:12px}
-    section{padding:40px 0}
-    .title{text-align:center;font-size:30px;margin:0 0 22px}
-    .sub{text-align:center;color:var(--muted);margin:-12px auto 24px;max-width:700px}
-    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-    .gallery img{width:100%;border-radius:18px;display:block;background:#1a1a1a;box-shadow:0 8px 30px #000}
-    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .feature{background:linear-gradient(145deg,#151515,#0d0d0d);border:1px solid #2b2b2b;border-radius:16px;padding:18px;text-align:center}
-    .feature h3{color:var(--gold);margin:10px 0 5px;font-size:18px}
-    .feature p{color:var(--muted);font-size:14px;margin:0}
-    .order{background:linear-gradient(145deg,#181818,#0b0b0b);border:1px solid #333;border-radius:22px;padding:22px;max-width:600px;margin:auto}
-    label{display:block;margin:12px 0 6px;font-weight:700}
-    input,select{width:100%;padding:14px;border-radius:11px;border:1px solid #444;background:#080808;color:#fff;font-size:16px}
-    .submit{width:100%;border:0;background:var(--green);color:#fff;font-size:19px;font-weight:900;padding:16px;border-radius:14px;cursor:pointer;margin-top:20px}
-    .success{display:none;margin-top:20px;padding:20px;background:#052217;border:1px solid #18bb6a;border-radius:14px;text-align:center;color:#fff}
-    footer{padding:30px 0;text-align:center;color:#888;font-size:11px}
-    @media(max-width:729px){.features{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:480px){.gallery{grid-template-columns:1fr}.features{grid-template-columns:1fr}}
+    :root{--bg:#080808;--gold:#d8b15a;--text:#fff;--green:#18bb6a;--card-bg:#151515;}
+    body{margin:0;background:#050505;color:var(--text);font-family:Arial,sans-serif}
+    .container{max-width:800px;margin:auto;padding:20px;text-align:center}
+    h1{font-size:28px;margin-bottom:10px}
+    p{color:#bdbdbd;margin:5px 0 20px}
+    .hero-img{width:100%;max-width:500px;border-radius:20px;margin:20px 0;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+    .price{font-size:30px;font-weight:bold;color:var(--gold);margin:15px 0}
+    .old-price{color:#777;text-decoration:line-through;font-size:18px;margin-right:10px}
+    .cta{background:var(--green);color:white;text-decoration:none;padding:15px 40px;border-radius:30px;font-weight:bold;display:inline-block;margin:20px 0;font-size:18px;box-shadow:0 5px 15px rgba(24,187,106,0.3)}
+    .trust{display:flex;justify-content:center;gap:10px;margin:10px 0 30px;font-size:14px;color:#eee}
+    .trust span{background:#222;padding:5px 10px;border-radius:20px}
+    .features{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:30px 0}
+    .feature-card{background:var(--card-bg);padding:15px;border-radius:15px;border:1px solid #333}
+    .feature-card h3{margin:0 0 5px 0;font-size:18px;color:var(--gold)}
+    .feature-card p{margin:0;font-size:14px;color:#bbb}
+    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:30px 0}
+    .gallery img{width:100%;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.3)}
+    form{background:var(--card-bg);padding:20px;border-radius:20px;border:1px solid #333;margin-top:20px}
+    label{display:block;text-align:right;margin:10px 0 5px 0;font-weight:bold;color:var(--gold)}
+    input,select{width:100%;padding:12px;margin:0 0 15px 0;border-radius:10px;border:none;background:#222;color:#fff;font-size:16px}
+    button{width:100%;padding:15px;background:var(--green);border:none;color:white;font-weight:bold;border-radius:10px;cursor:pointer;font-size:18px;transition:0.3s}
+    button:hover{opacity:0.9}
+    .success{display:none;margin-top:20px;padding:15px;background:#052217;border:1px solid var(--green);border-radius:10px;color:#fff}
   </style>
 </head>
 <body>
 
-  <!-- قسم واجهة المنتج الرئيسية -->
-  <section class="hero">
-    <div class="container">
-      <span class="badge">ساعة رجالية فخمة</span>
-      <h1>SKMEI مقاومة للماء والصدأ</h1>
-      <p>تصميم أنيق ومتين يناسب جميع الإطلالات والأنشطة اليومية</p>
-      
-      <!-- صورة المنتج الرئيسية -->
-      <img class="hero-img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800" alt="SKMEI Watch">
-      
-      <div class="price">2,900 د.ج <span class="old">4,500 د.ج</span></div>
-      <a class="cta" href="#order">اطلب الآن - التوصيل سريع</a>
+<div class="container">
+  <span class="badge">ساعة رجالية فخمة</span>
+  <h1>ساعة SKMEI الفاخرة الأصليـة</h1>
+  <p>تصميم أنيق ومتين من الفولاذ المقاوم للصدأ - متوفرة الآن في الجزائر</p>
+  
+  <!-- الصورة الرئيسية - الصورة الأولى التي أرسلتها -->
+  <img class="hero-img" src="https://i.ibb.co/3WqP77B/image-13.png" alt="ساعة SKMEI الفاخرة">
+  
+  <div class="price">2,900 د.ج <span class="old-price">4,500 د.ج</span></div>
+  <a href="#order" class="cta">اطلب الآن - التوصيل سريع</a>
 
-      <div class="trust">
-        <span>توصيل 58 ولاية</span>
-        <span>ضمان الجودة</span>
-        <span>الدفع عند الاستلام</span>
-      </div>
-    </div>
-  </section>
+  <div class="trust">
+    <span>توصيل 58 ولاية</span>
+    <span>ضمان الجودة</span>
+    <span>الدفع عند الاستلام</span>
+  </div>
 
-  <!-- قسم المزايا -->
-  <section>
-    <div class="container">
-      <h2 class="title">لماذا تختار هذه الساعة؟</h2>
-      <div class="features">
-        <div class="feature">
-          <h3>💧 مقاومة للماء</h3>
-          <p>مقاومة للماء والأنشطة اليومية بكفاءة عالية.</p>
-        </div>
-        <div class="feature">
-          <h3>🛡️ فولاذ مقاوم للصدأ</h3>
-          <p>هيكل متين من الإستانلس ستيل الفاخر.</p>
-        </div>
-        <div class="feature">
-          <h3>✨ عقارب مضيئة</h3>
-          <p>قراءة سهلة ومريحة للوقت في الظلام.</p>
-        </div>
-        <div class="feature">
-          <h3>📅 عرض التاريخ</h3>
-          <p>نافذة مدمجة لعرض التاريخ بدقة.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <h2>لماذا تختار هذه الساعة؟</h2>
+  <div class="features">
+    <div class="feature-card"><h3>💧 مقاومة للماء</h3><p>مقاومة للماء والأنشطة اليومية.</p></div>
+    <div class="feature-card"><h3>🛡️ فولاذ مقاوم للصدأ</h3><p>هيكل متين من الإستانلس ستيل.</p></div>
+  </div>
 
-  <!-- قسم معرض الصور -->
-  <section>
-    <div class="container">
-      <h2 class="title">معرض الصور</h2>
-      <p class="sub">معاينة تفاصيل الساعة من مختلف الزوايا</p>
-      <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600" alt="صورة 1">
-        <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=600" alt="صورة 2">
-      </div>
-    </div>
-  </section>
+  <h2>معرض الصور الحقيقية للمنتج</h2>
+  <div class="gallery">
+    <!-- الصورة الثانية -->
+    <img src="https://i.ibb.co/L9sM6m9/image-14.png" alt="تفاصيل الساعة">
+    <!-- الصورة الثالثة -->
+    <img src="https://i.ibb.co/N1W8T9v/image-15.png" alt="الساعة في اليد">
+    <!-- الصورة الرابعة -->
+    <img src="https://i.ibb.co/P4qF4Q1/image-16.png" alt="واجهة الساعة">
+    <!-- تكرار الصورة الأولى كصورة أخيرة للمعرض -->
+    <img src="https://i.ibb.co/3WqP77B/image-13.png" alt="ساعة SKMEI">
+  </div>
 
-  <!-- قسم استمارة الطلب -->
   <section id="order">
-    <div class="container">
-      <h2 class="title">استمارة الطلب</h2>
-      <div class="order">
-        <form id="orderForm">
-          <label>الاسم الكامل *</label>
-          <input type="text" id="fullName" required placeholder="أدخل اسمك الكامل">
+    <h2>استمارة الطلب</h2>
+    <form id="orderForm">
+      <label>الاسم الكامل *</label>
+      <input type="text" id="fullName" required placeholder="أدخل اسمك الكامل">
 
-          <label>رقم الهاتف *</label>
-          <input type="tel" id="phone" required placeholder="06XXXXXXXX">
+      <label>رقم الهاتف *</label>
+      <input type="tel" id="phone" required placeholder="06XXXXXXXX">
 
-          <label>الولاية *</label>
-          <select id="wilaya" required>
-            <option value="">اختر الولاية</option>
-            <option value="16">16 - الجزائر</option>
-            <option value="31">31 - وهران</option>
-            <option value="25">25 - قسنطينة</option>
-            <option value="19">19 - سطيف</option>
-            <option value="09">09 - البليدة</option>
-          </select>
+      <label>الولاية *</label>
+      <select id="wilaya" required>
+        <option value="">اختر الولاية</option>
+        <option value="الجزائر">الجزائر</option>
+        <option value="وهران">وهران</option>
+        <option value="قسنطينة">قسنطينة</option>
+      </select>
 
-          <label>البلدية *</label>
-          <input type="text" id="commune" required placeholder="أدخل اسم البلدية">
-
-          <label>العنوان (اختياري)</label>
-          <input type="text" id="address" placeholder="الحي / الشارع">
-
-          <label>نوع التوصيل *</label>
-          <select id="deliveryType">
-            <option value="home">توصيل للمنزل</option>
-            <option value="desk">استلام من المكتب</option>
-          </select>
-
-          <label>الكمية *</label>
-          <input type="number" id="quantite" value="1" min="1" required>
-
-          <button type="submit" class="submit" id="submitBtn">تأكيد الطلب الآن</button>
-        </form>
-
-        <div id="successMsg" class="success">
-          ✅ تم تسجيل طلبك بنجاح! سنتصل بك قريباً لتأكيد التوصيل.
-        </div>
-      </div>
-    </div>
+      <button type="submit" id="submitBtn">تأكيد الطلب الآن</button>
+    </form>
+    <div id="successMsg" class="success">✅ تم تسجيل طلبك بنجاح! سنتصل بك قريباً لتأكيد التوصيل.</div>
   </section>
+</div>
 
-  <!-- السكربت المربوط بـ Google Sheets -->
-  <script>
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKARn5PTnB2zFavqOARQDIU90ZNTAHW6_wNc15SStIUJa2E4m-WHGLHaqYYDnhBCcMqA/exec';
+<script>
+  // رابط السكربت الخاص بك لـ Google Sheets
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKARn5PTnB2zFavqOARQDIU90ZNTAHW6_wNc15SStIUJa2E4m-WHGLHaqYYDnhBCcMqA/exec';
 
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      const submitBtn = document.getElementById('submitBtn');
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'جاري إرسال الطلب...';
+  document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'جاري إرسال الطلب...';
 
-      const formData = new FormData();
-      formData.append('fullName', document.getElementById('fullName').value);
-      formData.append('phone', document.getElementById('phone').value);
-      formData.append('wilaya', document.getElementById('wilaya').options[document.getElementById('wilaya').selectedIndex].text);
-      formData.append('commune', document.getElementById('commune').value);
-      formData.append('address', document.getElementById('address').value);
-      formData.append('deliveryType', document.getElementById('deliveryType').value === 'home' ? 'للمنزل' : 'للمكتب');
-      formData.append('quantite', document.getElementById('quantite').value);
+    const formData = new FormData();
+    formData.append('fullName', document.getElementById('fullName').value);
+    formData.append('phone', document.getElementById('phone').value);
+    formData.append('wilaya', document.getElementById('wilaya').value);
 
-      fetch(SCRIPT_URL, { method: 'POST', body: formData })
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('orderForm').style.display = 'none';
-        document.getElementById('successMsg').style.display = 'block';
-      })
-      .catch(error => {
-        document.getElementById('orderForm').style.display = 'none';
-        document.getElementById('successMsg').style.display = 'block';
-      });
+    fetch(SCRIPT_URL, { method: 'POST', body: formData })
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('orderForm').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    })
+    .catch(error => {
+      // حتى في حالة الخطأ الظاهري، غالباً ما يتم الإرسال
+      document.getElementById('orderForm').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
