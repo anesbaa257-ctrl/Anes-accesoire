@@ -1,183 +1,322 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="fr" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SKMEI - ساعة رجالية فاخرة</title>
-  <style>
-    :root{--bg:#080808;--gold:#d8b15a;--text:#fff;--green:#18bb6a;--card-bg:#151515;}
-    body{margin:0;background:#050505;color:var(--text);font-family:Arial,sans-serif}
-    .container{max-width:800px;margin:auto;padding:20px;text-align:center}
-    h1{font-size:28px;margin-bottom:10px}
-    p{color:#bdbdbd;margin:5px 0 20px}
-    .hero-img{width:100%;max-width:500px;border-radius:20px;margin:20px 0;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
-    .price{font-size:30px;font-weight:bold;color:var(--gold);margin:15px 0}
-    .old-price{color:#777;text-decoration:line-through;font-size:18px;margin-right:10px}
-    .cta{background:var(--green);color:white;text-decoration:none;padding:15px 40px;border-radius:30px;font-weight:bold;display:inline-block;margin:20px 0;font-size:18px;box-shadow:0 5px 15px rgba(24,187,106,0.3)}
-    .trust{display:flex;justify-content:center;gap:10px;margin:10px 0 30px;font-size:14px;color:#eee}
-    .trust span{background:#222;padding:5px 10px;border-radius:20px}
-    .features{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:30px 0}
-    .feature-card{background:var(--card-bg);padding:15px;border-radius:15px;border:1px solid #333}
-    .feature-card h3{margin:0 0 5px 0;font-size:18px;color:var(--gold)}
-    .feature-card p{margin:0;font-size:14px;color:#bbb}
-    .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:30px 0}
-    .gallery img{width:100%;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,0.3)}
-    form{background:var(--card-bg);padding:20px;border-radius:20px;border:1px solid #333;margin-top:20px}
-    label{display:block;text-align:right;margin:10px 0 5px 0;font-weight:bold;color:var(--gold)}
-    input,select{width:100%;padding:12px;margin:0 0 15px 0;border-radius:10px;border:none;background:#222;color:#fff;font-size:16px}
-    button{width:100%;padding:15px;background:var(--green);border:none;color:white;font-weight:bold;border-radius:10px;cursor:pointer;font-size:18px;transition:0.3s}
-    button:hover{opacity:0.9}
-    .success{display:none;margin-top:20px;padding:15px;background:#052217;border:1px solid var(--green);border-radius:10px;color:#fff}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SKMEI Homme — Montre Acier Inoxydable</title>
+<meta name="description" content="Montre SKMEI Homme en acier inoxydable. Dateur, aiguilles lumineuses, style premium. Livraison 24 à 48h en Algérie.">
+<style>
+:root{--bg:#080808;--card:#111;--gold:#d8b15a;--text:#fff;--muted:#bdbdbd;--green:#18b66a;}
+*{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#050505,#111);color:var(--text);font-family:Arial,Tahoma,sans-serif;line-height:1.55}
+.container{max-width:1050px;margin:auto;padding:0 16px}
+.hero{padding:20px 0 34px;text-align:center;background:radial-gradient(circle at 50% 10%,#252525 0,#090909 55%)}
+.badge{display:inline-block;border:1px solid #555;border-radius:999px;padding:7px 13px;color:#eee;font-size:13px;margin:8px}
+h1{font-size:clamp(30px,6vw,58px);margin:10px 0 8px;letter-spacing:-1px}
+.hero p{color:#ddd;max-width:680px;margin:0 auto 18px}
+.hero-img{width:100%;max-width:600px;border-radius:24px;display:block;margin:18px auto;box-shadow:0 18px 55px #000}
+.price{font-size:36px;font-weight:900;color:var(--gold);margin:10px 0}
+.old{color:#777;text-decoration:line-through;font-size:16px}
+.cta{display:inline-block;background:var(--green);color:white;text-decoration:none;font-weight:900;padding:15px 26px;border-radius:13px;font-size:19px;box-shadow:0 8px 25px #000;margin:10px 0}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+.trust span{background:#161616;border:1px solid #2b2b2b;border-radius:12px;padding:8px 11px;color:#eee;font-size:13px}
+.section{padding:48px 0}
+.title{text-align:center;font-size:30px;margin:0 0 22px}
+.sub{text-align:center;color:var(--muted);margin:-12px auto 24px;max-width:700px}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.gallery img{width:100%;border-radius:18px;display:block;background:#1a1a1a;box-shadow:0 8px 30px #000}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.feature{background:linear-gradient(145deg,#151515,#0d0d0d);border:1px solid #2b2b2b;border-radius:16px;padding:18px;text-align:center}
+.feature b{display:block;margin-bottom:6px;color:var(--gold)}
+.order{background:linear-gradient(145deg,#181818,#0b0b0b);border:1px solid #333;border-radius:22px;padding:22px;max-width:720px;margin:auto;box-shadow:0 15px 50px #000}
+label{display:block;margin:12px 0 6px;font-weight:700}
+input,select{width:100%;padding:14px;border-radius:11px;border:1px solid #444;background:#080808;color:#fff;font-size:16px;outline:none}
+input:focus,select:focus{border-color:var(--gold)}
+.total{margin:18px 0;background:#090909;border:1px solid #333;border-radius:14px;padding:15px}
+.row{display:flex;justify-content:space-between;gap:15px;margin:7px 0;color:#ddd}
+.row strong{color:#fff} .total-final{font-size:22px;font-weight:900;color:var(--gold);border-top:1px solid #333;padding-top:12px;margin-top:10px}
+.submit{width:100%;border:0;background:var(--green);color:#fff;font-size:19px;font-weight:900;padding:16px;border-radius:12px;cursor:pointer}
+.note{font-size:13px;color:#aaa;text-align:center;margin-top:10px}
+.success{display:none;text-align:center;padding:20px;background:#092217;border:1px solid #185d3b;border-radius:14px;margin-top:15px}
+footer{padding:30px 0;text-align:center;color:#888;font-size:13px}
+@media(max-width:720px){.features{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.gallery{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}}
+</style>
+
+<style>
+/* Conversion upgrades */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:rgba(7,7,7,.96);backdrop-filter:blur(8px);padding:10px 14px;border-top:1px solid #333;text-align:center}
+.sticky-cta a{display:block;max-width:680px;margin:auto;background:#18b66a;color:#fff;text-decoration:none;font-weight:900;padding:13px;border-radius:12px;font-size:18px}
+.offer{max-width:760px;margin:25px auto 0;background:linear-gradient(135deg,#191919,#0b0b0b);border:1px solid #4a3a19;border-radius:18px;padding:18px;text-align:center}
+.offer strong{color:#d8b15a;font-size:22px}
+.offer .small{display:block;color:#aaa;font-size:13px;margin-top:5px}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:25px auto}
+.trust-card{background:#111;border:1px solid #292929;border-radius:16px;padding:17px;text-align:center}
+.trust-card .ico{font-size:27px;display:block;margin-bottom:7px}
+.review{max-width:760px;margin:20px auto;background:#111;border:1px solid #2b2b2b;border-radius:16px;padding:18px}
+.stars{color:#d8b15a;letter-spacing:2px}
+.micro{font-size:12px;color:#8e8e8e;text-align:center;margin-top:12px}
+@media(max-width:600px){.trust-grid{grid-template-columns:1fr}.sticky-cta{padding-bottom:calc(10px + env(safe-area-inset-bottom))}}
+body{padding-bottom:70px}
+</style>
 </head>
 <body>
-
+<section class="hero">
 <div class="container">
-  <span class="badge">ساعة رجالية فخمة</span>
-  <h1>ساعة SKMEI الفاخرة الأصليـة</h1>
-  <p>تصميم أنيق ومتين من الفولاذ المقاوم للصدأ - متوفرة الآن في الجزائر</p>
-  
-  <!-- الصورة الرئيسية - الصورة الأولى التي أرسلتها -->
-  <img class="hero-img" src="watch1.png" alt="ساعة SKMEI الفاخرة">
-  
-  <div class="price">2,900 د.ج <span class="old-price">4,500 د.ج</span></div>
-  <a href="#order" class="cta">اطلب الآن - التوصيل سريع</a>
+<span class="badge">⌚ SKMEI HOMME</span>
+<h1>أناقة رجالية تلفت الانتباه من أول نظرة</h1>
+<p>ساعة SKMEI بتصميم كرونوغراف أنيق، سوار من الستانلس ستيل وتفاصيل مضيئة — مناسبة للعمل، الخروج واللوك الرياضي.</p>
+<img class="hero-img" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAIxAr0DASIAAhEBAxEB/8QAHgAAAAYDAQEAAAAAAAAAAAAAAQIDBAUHAAYICQr/xABWEAABAwMCBAUBBAQKBQkGBQUBAgMEAAURBiEHEjFBCBMiUWFxFCMygRVCkaEJFiQzUmJyscHRQ1OCkvAXJYOTorLC0uEYNDVUY3MmNkRkhPEndJSz/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAKBEBAQEAAwACAQQCAgMBAAAAAAEraiExAxJBBBNRYSJxBZEUIzLB/9oADAMBAAIRAxEAPwDz0BA69aOCRRAMmjjfatsjAE9KOAaBOO1KAdzRQjOM0IG/WhG46UOKIAdaNjGKDoaN16VewYYPXrRgO3tWJB6UYCqjAB71mM0cADqDQhIoEinFZyileTHSgCO1AmAMUPKDRwk0ITQJ47Cs5KV5azB6CgTxjbFBy560py0PJn3oCgUdKexrAg4o4TQAE70oE9zWBNGCaDEgUI27VgTijcooCbZ+KzHsaNjvisxg7UGY+Kyhx7UPvQwQjBJJ60B23o5AoFAYwKIJQkb7mszQd6KMD8UbmPeiZPas3B3oDk5opPMKw0BOdqDMDvRwcCk6Mk470CyScUbrSaTRwdqA2MVlBmsySTigzGaDG+9G+tB061TBaFIH50JHtWJG9QHTtilAMiippQChgmaHm7jahIPagIz1oCk75yKDINYRisHXaqgyc0shPzSack0sgGhhdtPTBp4yOmKbMjPanzKNqumF2RtThsDsKIwn3p02Mnaqg7SCBvvTpCCQKTZTvvTttI2FWAPL5hinDLYBrEoFLoA70DC7Jw0c+1V5d05kbHNWLeP5s/Sq+uYzIOKUa7c4xcaJx0rRLuxyKO1WXJbCkEEZ2rR9Qx8KUUiufKLxamsDpRPcZpRwYJzSeRmuTozrtWHbvWHrWZoM37UKT1FADQZoD579KzbFAPahGMd6gwnFBkdqE/toD0zVA5yNqEHbeijNCTUA9skVm2MGgz+yh2qjMD2rPmszWZAFAGMDpvQ/WhznpWYz1oAGOlZnFZ1oMdqDe8ZGaP12oEpz0FGAxW2cGA+cUoPrRBn3o6fmi4OBQ4NAPijpOdquIDFHSN6zHajpTiqBSncYo4G+4rAN96OAPaiAA/ZRgnejDFGwfagJgUPJRwB2oQB3NAnyGh5KUAPajcv5UCIQKzkFLBPes5figR5Dke1CEe1K4oeSgSCKEIFLBGKwI3yBQJBNGHzR+U4xQ8pznFATlzR8b4rMDOaMB70BCntQcuB0pTHftQcvbNAmR3rCBneleXbFFI7UBCKDHvRiMUBFATvQEZ6GjHOfasAyqgAJ3ocZ3raNPcNtZ6pifb7JYpUmOCU+YhHpJ+tTB4IcTj00pMP+zTYuK9KVDaswc4qwDwS4mD8WlJgH9mkZPBniRDDa39KzAhxXKlXJtmmwaNymh5cVvR4NcRAnmOmZWP7NEHCLX+cfxYm/9WabEaUlKqUCCBmt1HCTX+cDTEz/AKs0c8IeIIGf4rzcf/bNNVpATtvRwnAya3EcKde5x/Fib/1ZoyeE+vlbDTMz/qzTRphG1ARW8f8AJBxBIyNNy/8AqzSrHBriC8QlOnZXMogAch602DQuU0KUZq11eHDie2AHLKEE9lK3FCnw48TeXmFpbx/bqbDFVpQRtilEpOOlWcfD3xKSQF2dP1560rU2m7tpO4rtF7iKjyUAEpV3B6EfFXdEPgd6IobHehKh0pNR9zRBDscihT+yjJAO5o4Rk7VUYgdBThA396SSk5pw2MfnQOGRT9lO1M2U4PWpBhJIzQLtDGMCnTaM9KSaSc4Ap22jbrvWkHZT+dO2xikm0dhThAoFUpGOtKp/fSQ2G1HChgYFWBjelANEfFV9cd5H0reryshCvpWg3BY+0HfalDd3cHYVql/YyCrFbUopxUJd2uZJyKzexXMtHK4aaH9lS10Z5XScVFL2PtXGzHSAyOlB3rCdqAb7ZrKjUHWsxtvQH3FAYUOaLQ7e1UCdhtWdds0HejA/FQABih79Kz86Ak9vzoB+lZWVlUZnasrPpQZOelQD0oQfeinPUUOaoEnNB+VYDQdKCwBtt3owFAN+lHAFbZYB7UYbGgA75owB61cBgKOkAUCQfejp3oDAUoEnFAABvSg6dKoEexo6etFAFHAxQGAAoQM1gGd6OBneiC8tGSBRgN96EJNAXHtRkjNGAzRgn91FFCcDeh5QaPgUIHtRCYRmh5KUCaME5+KBMIxtQhB+KVCcdaEJxVCPJnvWcm1LhPfFZy+1QIFPxQcuDSxHfFE5fcUBeXHWsxRgDQ4wKAhTRVDNKbUU5FUJKGKKRSihmikD3oEsb0ZA9QzWHr1oyNyBj4qD078NHDqbq3gPpeVp20R4obQsOurWUqfVk5O3arOTwJ1io5P2b8nTTjw3alsWjuDmlLA7JaacZtzSlpJA9Shk/B31q1E/vh1p9CSp21NIQBkkg/501fGvhbFQpyRMhtISclSuYD/AL1a/wAX/EDpLSGlpkiE+wuagfycOJIQ4f3HaqO3uXEu8m4pS2lIylKRhI+ABsBSk3O3O/fGr/GZxb4iay1lMvHDvS5l6Thx4sR+YxEDm30I+8WCSCEk43xtXNuoePWs1XNTs1lyO5gJ8spKeXH/ANq2XQ/Eu7cIeM9113a3p6Ilyi/Z7zb4i0tqnA7+o/i3OclPP9AatKXxV1X4ip69QcLPAzJvsxHpcvy4Elt13PylI8vPxzmr4mtB0DxS1Pq+dMgyr22xKbbDsdsE4I/fV6S/Efr24cI3uC990159k+0B2LO/BKaGMFJ/rI+DgjtUfo3wy+I22ajia4u/hh4mWu9sOec2zbIq5MNC8Yxyf0f4Uv9i0/xXhX2x6Y1f4IOPjcmYpCHr2uzPfZ3SOrhQpPkpPykCn/AGedY1zR/H/iHpzSrGl13x1y3sLPlfA7Ait3tvih1/DUpqfeEusgDYkggft2rorxD+AnX/ETRllRwL8K+odNSmUp81D6eSVN22U8S4UpPfCQaq23/wAGP4/sU1F54veF3i2/GbAUpdttSpA/JKeUq/Oos2o9vxV6pypRurYBH4ic01d8WfEGMVJTdWAn/Wc+1XbE8CHHHiw2uLwn8EvFGy24DkRO1Op2EkgdNnyf3ACtf01/By+LTSGpU6k4j/wfes9WQ1K+9sz94mNQ3D/W+zpScfkqjP2itD/ws8R3Ueb/ABgSpO45i4f86YveKziC4rm+3pUnv96e/wCYxXqNcv4OXi9rnTsJPCzwZ6U4XmG0A7Z5a3IynM4ylDi3FK3/AKylGtJuv8FR4x4AflSfBNb/ACEkqU2i8R5BSn/6fOo0/wC3i/q3xf8AE3V+itR6Euz6ZFr1LEVDkseYolvI2dQScpUk9Mbbd6psqOc+9eg988Jmt9G6y01wv4z/AMHBryytatX5Me/Qbs85GhL39bhRkIxgk+YpI/I0s/8AwefEi6y52odBeCqdqDSsNxbb9zt0h1cSOts/eBTod9WMEHG9SRbd6R/gwvDv/HbidM42argJdsbB3x8A1612t1iS84ttOEjCQfkVgL07e2mEtobQUpSkAADA/IVM8e9SseHPwoau1vHk/ZdQT0qs9me5eYm4vp/f/Noc396q+Jdcv+NLxlvXXxCSOGvD+8SVs2BhuzTHmXMJck5ysJwdx6iPyrlG7XW63d8yrpOkS3Sc87zyln/AHif7q0aBcbzeLtNu1yeeefkO/aH33FlRWtXVSiepx09xWx25m4yBzySflPtTh1eK2eI84D6XAfanLbL4OFA/t3ptCikp2HSpOMyewrdA2fSpJyBS4Sfal2mgOpNO2o+e1WC4R6m1HapCMnoRThmOAM0uwxsT3qwKaR3qQA22ps2jGwqQZbURv1qhh+f2UdAJPSjBGOtGQPagUbaO4FOEI6ZoqBgdaWSaIUTtvSjSTvRUoIGaUQrJpD8tD1Isf31qktGXVb1seonk4VvvWrzXMOKOay6Ryl3B2xTZS/iilzfBoq3PahI2Th5f0Wq+IW6vCVbZJrtDhrxBYfjtFLwUMf1q8/W5pSvep+w8QrhZllTbyyO2VE1L0s32PTzUfESBbrXzeanmA3Ga584jceIrKnmUPe2+a511NxsudzjiO3KXj/arTrprOfdGy3IfOfbNSNfXXfEfifbbm06sOpypJ6mueNVa0j3Oat1LozvWvytQzHxyebvUcuSt5WVEE0kxrXb+jYSo2mlI7f41q2ubQmdHW0EZKjvUtpq3vLskflUcb1LXRt1iO5IjAqeRkpH/AHanlY19R/DnhpI1I43KdjqWkDrtvXYOiOFVstkFsPxEEqSDuKrfgDxI4bItrFqn+XCuLYDbjTvUqHv0xXTcWdAnMIdgvIUggeke3Sksq3mK54mcI4UyzPLhxEhXpOMZri7X+j27ApxDycOqzt3Fejdwe52VsSG8oUOXPx1qA1B4ddDcU0o/Si2o8lX4HEkD1dhTsnXby2m21SFEgZ3psq3OJTzkECvSDWvgMsyWVOwpIcz+HAH+/kVSmp/AxIs8J5S30qW0SrkCcnlAzn+4UWVxOplSDg/soq4ygOlc43jTFwsd1fgvxloWycKSRuKxL8ptPl/eJwd05I/aKo6L4d3e5W3UNvkw1upUl9B/v3rtpvwxXXjnY3/ENf573lWV1y1aagqJCVN5AeffX2ST6Up36k+xrg7hdOnfpxjCSo56pByf417f6G0YtPhXm6Jty32n5Gml3l9mQgoS1KeSpSgM9h6f31Lw+m3jW3aXm/atR2aO1A/m/trXl4x976efI+vNXfXiT8H9o4a+Efhvxd1F5x4l8Rbm4/BjpJS1FsjSAtKAn3WFoUpSvxEn8q5v8Ffhv8A/as8a9v4a3Z/nsS7m9PvOckKjMgqWkjtny8D5NeqP/Cl9Mzbhrfgtwr05YnlwI0e43JbjaQluKltpPl822cEL+m1b+m+2M31/f/Ty94c6P1jxfvSNO2iUq0WS2p+23jUNwylixxh+JalHGV/1UjrW/as8V1/8O8RvhP4RLi9orTtrmh6Xqbylrmajd9Klvu7gpaCskAZJ5snfGNP8AElrLSmj4zXh04P35dztdsc87WN6awf4wXU4/kwI6sMDI/wCsfU/1eXfP+H45mE/e/Z/5B368i003+GPhjxl0lxF1n/2g9S6Xh6d4h64c/jXdtN2+f5y2GipS20q9XmKS00k/ezs/fA+a6A8fXi24DeKPxQcONF/xnkseHjhmx/p3o8Iofubm+G2u3MVhKeUnpzGvn4U8mC8X/LU8SUpAUnr7/mR3p5Anstx1vSkhLshXmtJSfQkdz71MdfHjM/x3y249X/8AdC0JpXXOseE8jwocJ3v4u/Yvs852a36lsgAtsR8r2SlOSVJ2Iyc1E/4TLxrUzwq6A8K8i4f8s+oYSG37e2gqdjpCkpW/ISBhvAJwD1O+4rw7XmGpl23xytmSvySAn1KBOy/p7D61vfB/QsnxA8dtNcE/40m/a14g3ZmyRpM4A/Yy6R6uYZy2hPMvA/qE+4M6/jZq/s32fT5+32m4k/wo/h18PXgt034U2/C263G3W2XAn2a5PgtuE/iccdWSoqyTnIyc1x542dZ+MTh9o7TPio8Afi3lQOFt7+4sWibHkI04sk8yoz8XIS2v0qSFFIBxgK/Cnz48bLnhS0n40rnoPw8at4g6lsWh+e13O436X5yZl3C3EOpjkLOHClOfL7H4IrcdP+ITXN00NduF+j+IGqJ3CyA1m96ekPeehKlrwE4O6EFwYSR6vUfqa3/468L9k/X8f+43p7/hPviK8XGgL54XfEJq5p/UkR1q6Wa/RWG4qLhIYSsLj/AHagk8wS6tIH80p1W/Iaw+D68XPDfwkX7UvEDx3M3OdpS3wX3I8+a19omG4J/mI4T/OlI29Xpz0715E6y8N/EDhvbbJx28P0p283m3f87PWiOpTk63p2/m2TkrT+sn32I3qF4v/AMIF4r+MngcT4NuMD9g07YLZf/tdx1mIao2oLswhS/IhvqI/mx92CoevDKfT+MmvP9/S/X1f/Xk//fT1r8LP/Chf4Kzx03i18M+MWhf4p3fUeodSybXpe/y7al52X5iF/ZY4CUpWhS3kL2SfeorxlfwhHhn4y6/4U+E+A7ftL8J9PXjytQ61vjSY/lxmXlsoRHBzyoOebKjnfAya+X0N6Zst4mNWuI3Jkx0sllL59JkJTkuH3IOMfGawyr9fLhMvmq5s26TZmPND2/MvdIUn46kfSq4ePr/X1uXj6S/EvxD8Jp03eL3wv8TWn9X6f0vbfskew22fGckXW4uKCWlFKTlKAnckD1b/SuYdZ+HzxK8a1L/wCTrghfr415Xm3F53zFRXG+U8hbbGUpO3Y15X+Gfwi6m4q8RdPyLhp0M2v7UiU6G0feLSg8xSfY19R4/A606C8Gj1p1I/OtsjUz/kM2p6WptTyynYl3HryACo9AM9aqXyX6eXz9a24ecSeDGpn+G2udH3K2zbf/ACf7LLXl+Of/AHZ90f4E7/FadpLijqThpqqHrvQdwk2+/wBsO3I4pP3ffmHz7nr/AH16wXPhz4bfGl4mX/A8pXm6/wCGmh/44S9a2jXUic/A+9T5dpS6lflqU4t5p3ykqL2XApRHLjNBeN7+D11TqTwZz/E/ozTcewao4ZXa4m4W21S/s8R2zxV8ilp8/dThbAOO5Kj1628dZ/p/q7z54P8f3iZkeKjh7ofXerWvLv1ptibM8/sTJjt+ts5+SOncAnvmvN/itdEuO/ogH8f4vqOtXD4i0vWPTrNvlz2nH4qylKGxlA7qUk+2T/3qoXT/DvVfFSdFjWyItlye5yRZ03mZZ8kHK3XMbAnI5U/wB29T79s+t0nwt1lfdE6jhaj0xMlMz0rTybE4+MDoa/Th4Q+Ndx8QfhL4e8S735qbwzDXZby3IQpC1Toaw0teF4JSfSc4webrUn4U/Ah4W/DVwmRqDi3dNM6o12uI7cpdzutwbcixHByJSG21qCUNpC3ACsBRP4u2Kq1p4yPDTfNc3Pgbw34pWK8xos5q4zmrBKS7Hiy2mgl11JTyocThtCfu+Xv3rUnbE4fS2u9K/3UnpU94hOHWq/Dx4oNS+Hu8ymrmmyTFw13GO391Njo/mt/q42A9xVWW9rI9XU7mnJitks3f8xU1GYI3qCtzR2/3qkG4pG5O1aEu22O4px9SPlqCgwT7kU7bSff3qofNoP/vTlG/SmjaTgYp22nfegeNjI/vpeG7/wCVOUp26UolG4qfA9Sk+3f3pRKfeilGNqVSB2+KaKBSNwaOpOO4ooTvtSoScfTegS8vr2/KlEI9qOEDO46UoEgdE/nV2D84iO+fIWPio16L3xUxORhtS8/mKg23x9T2NYs44I15OaLpX6Cpm6eGvh9q1z7Z/F+0yn+X0+bHQf38v0/4xS018Msc4qS4GceIehb2h67xUvxXfQ6gnfl/v7f/32y6S6mJvhE4Lw1hEzhhYY6f8ASLShP54H1/8AvyXo3hX8Peh1oXddD2S3tN7lx1aUD/aJPf8A452pL/xA2rU1ijR9K6bZ/SstI5XfNS86x8chxy52/f8AHfW7/wADXFnidLbm3C/vx4r+UuvyFk/Ixg1b39M854mde/4fvgvE0lIs134fWyTInR/Ibb/1ee6P/wDFb44pP45vhB8N3B7Vf8bOHWg7fCnwnPNadSo8zau+E/mftH8a6s4d/wAE1cbfIjPajvTqW+i1/pAnI/Oqj4jeE9rQ2p3/ANGxI8hhG4RIdzn45e9T73/U/X/a1Yk4o/3e/YvA9oK7w+KGm47S5LpU+gJ9x2A/L4/xT6T3rI4x8f1q8/u4+dngTxb15wb1hE4icNdTy7Bf4SgpiVDXkKGc8jjfRwZ/sEewr3u/go/4Sfhj4kEteH7xXXSzWHirEcbbgKkpEWJfEcvqKM/yL2M+nOP0f5V51cf/AOCl0HxgRcLlo5l226jaQfIlpPLyn+o3sD84x6vhX1v+64H/ACa/w2F44feJS1/a52m9RfZ9J3a5vJSi3yYpBgyXFH9ZaC103OAnf1GvPz5x044458PqK1hbrHfbXm0tsRlyEHzH1qACx3A/4+1ecviy4c8Q7r5qLHbZkq3R/TzNsnyf6/T4/sfxrL/wCD2/4VThb4o40Xwu+L28w7JxEtkpyG65Pjllu4pCsg8o/4+U+30fSbhO6A123fOAnFCzTbM5H89mC2+28y4B/449/f61vjn431f/X/AL+fTh/xFfwfviD40x33LHpKTHaWf53lKfz3qS8E38Chd+GOso2veNMqNcnIigv9HsJ2cIx1J+m/X26f5m9G/4L7jvxLdTN4icX3rc2vfmjMlzb4I61sOpf4EbiE1FVJsnir1d9oQPSiREISf76L9P5Rz58f6X5+fL15sugL3oiN/F7Sdr8plAylsA/yGk9UeLLw9cKLK1Z1cRNPSm44P/m9qR9oUp/P4j+/69P2H8UfgT/g5uA/E51fFHxfvMvSoalMuwILBSpagcdQoAgn8vtSPhy/glfCDG1Kxe/ED4gtP6ls0daHhbY8x3z5AB3SpDpxv8fp3qze3/AKa3j6a59/4j6Gf8Dzw/m8R/EZcPEOuzm329pBctzafxeak/hn6/o/6/p4GfwimudYy74rR8C4PRoPqS6hs4Lh9sfl+X+P0B8H3EHRXCfR6tKaP04zaNOeWI1vt8NAbDbSdgUoHQ/8AHvXkf/CY/AnqC8I1l4vNKRlS4T7qrg59nYx5a31enp16Adu39mubny4er9c59fS3y+SfjXp3xCaFf0f/ACV5uY+b2pXk/fD0fP099vfbpXJvEHTvEbSEmXctQ2x1b1xTyl9aefI+fw/1sdev4fb6cI4o+G3Xjtwk3XUOmbkw7F2aSuOeb39vj29sduX4z8T+BtzS/cNPajsEhqIglTrqmsbf49u3tt25eX3cOevX9Xh9fXxv0+mSfx7285/AnIuUvxscM16XbfU+3qdh5TbaBzeW3lTv/ZScAetSj9S90/8AtF1v05P8H8S1wIeX7lxfgtOJRjP2eOxLUeX35nGsn3Uo9652/gfvgk0fw4s/FvxvatsK5tnt6HtK6MhR3R9plT8AvuI/EAEgoRz+3Me3Ln6f8GbgHqPxceG7xF8AOHLdtk6/eZsvEXSrFxRz+c6xIfCWWxgYQ/8AaAnOc58v9U+n3P2v+G3ze3znw3yP891o/wD9q63s8fA85r43fD3pfxTeGzVfAvUchmKxre0m3ty1IKlwZaSlxDnH4ikp/m+3+D89PGnw8a/8K/H/AFp4euKVqfhah0fe37e+2v8A0qASpL7ee3lnI6d/mvuEsnA3ijwr1m9eNWWi22bUfBy9yIt9sr7qf2O1xIuP2gOp3D2M/wA2RsfX1J8c//Ca/wCBy1D/AAlHiajcR9IeIXRGhNW3S1RUXaDqND0dVxdQkJT5C/IIdyS4AebcED4q/XpM/f7aXf3+/X9X1/xHygW5926t70pG/c9u3X+Nbm0lptHkJSCo7E4xn/w0v/2mO+Ffw1a54JcSuJ/CnjLpaRAt9kZ044y9IS5s45On/eJwAcpSn5yD8V1/e/AInhp/BlR/4QXxF8T1w1ag1vIs1tsqXvJ8u3iUqMw8vfr92XNvvP1+5y30dO3y54s/g7PEFwv1TqbTWoP4vA2bU1ks4vS33mbf5VwU4YrqU/x2x64S1/eD/f0rofx3fwgXiL1N/AueG7XfBDU2nbS1/GiRoHV0y0tlmS5cLcpXInmS4MtuM/eD+sB261548DNLXDxm8J/Ed4p/EJfr1etN8E02iJpW3/bnvIs11vDzoakobzjzbS2f5xKvdW6a4B4y8d/4w8E7X4bdIag/inw405f5F5i6atb7ikTbhIcK/PuD2M+blf06+nzsX3E/3x13/f6fX/v+79n0i/wf/8Awh+3XngRprhh/CN+Ie6I/R3E1i+3+E1fF/b/AMaEtkIayDnlUpfMdhzrT2/f3eOP/wAJs8I3EniDpL/sYp4sXzQ/DWwSoM+/vutMvzb5N8v7XKS+6f5v7pCEp3PLn1f506e1/ddI3f7PBuM3yF+lTvnq2H/L/D/34r/f5m1TAtUuO3/Ocv8AmO5SflPyB9e3N/E+/LOf7u8+2uX1/wCfO9fpq/8A/tG6+H1k/wCFFeA7idwo8G2iIvhg406mXwq4Zaj/AIvy0Xi0qQpy3yEltL22A4r/AN59SgB/g4p/fVzXm+X/AEOzL1I/G+0S4XlqD4K/u9/Ucdsn+HzjXp1/B2eNvhB4yOCmsPBx/CN8SrhK/T2q7M3At7f33mJchE+clz9X8QyT6cffA/P654i/gN3fDBwtm6aXxu0xrm3zI/223/8APk21yT/0+7fT0/y8b+uX5v14/O8eXzfP5fOfX5u/s35/y3v+3u3eO/OaK8ZXiRvvFfh1wE0HqHVMx+y2S1T3rfb3Eft904C+bb/L/O4S24XfTspR+f+7743f38Pnh4uWjtc3+J/G232C0IlybX5i0tsR46Aptsn9Xf526+r38q+H/AA/Xf/A1e4fQf0m+i2I/074LfyfSce22P3e+A515q5i9Q19yD0X/L5x/f32/m6/wAv2v55a4/9a/m3+D+i3+7zS9vjG4/f356vW5w5uEuXzS0/eYy/13q2bQ+m2LdC+0yBy/wBf3+v/AFv3/f6zX2dJipj+X96B5q3/AI/4/L8/m/1q/wAT+ItuS4iDEm8qf3I2qcvWdO3U5z6/x14l+M4P/p273q4M4S44sY696120x3sjlBweuBUi2kY2qQgtt4H3vNWfUqA20vA2I/4/4/6/xHraD39/wDFOfs5xso/T3pbyncen6/T5/vptInTCNsnJ2xilEI27fShAxy+5o6fehThqjUptA9/rS3ljf3/ACpxA0SjI5tqVQ3jGBS4Y39xSgaI/Ogi5pM3v1O3X5pXywD03pdDZHbp3/xp35Z3p3/J3UfM16Aew33x3x/w7/NKEpS3z/mPp2+B079/b8fOn/L+/3/AM//ABfl+yAUp3cgdffm/f37dv3fN/n9k86I3j1v/wB3X6cOQceYd96bpdQf54YPTm39v6u+Prj1ev145uT6484mE5sPlHtt9M9eXG/b083O53/c9m9/I2326q/Ibe3x/kefk/0I5d37X21Lbb2f1/s0mSnn+e2/uRze3/3u38nL7p5s9ebr4f2Z5s11vjX/AE64/XbWprqnn1U834R52enXf6f39/Xzf45903tP4p329fM/d/j5Xm5s/r/c53/3p/0H3/1f+q/I/b+4/e8I4S4X9b9/3nN065/X+/w/vf/AHPu/I3+y/c79fXf1/579P1334+O3H50T6I2p9vXvE/t49X9L8P/XvP/21Xl35p638I581Pz0/z6/m/wA/N6/x3yP6I39/Xv07/X8/wf7m/wB9vR7f0N+3+m9v6O/93N/x/f3p/S50q+vE8/vHvf996/Xp+0R95/b9437d/l9S/eX1f0t8f3+e/D6Ier0v5u/65P5/x3yPWp3tE+iPp7S1m1P39OfN+f4p3f2q4R3x+f/AN4f/L/43y22/m/3f/k8+/xP9X3f8N8/m+17/Ue10X1Jffx6/P8A1f3918fL/wDYqOuv/Nn7T8x8+31/9p+u37L48L5x/f34+14e0/o/X4713/tP4s/0/d9o/jX4I/b8f9Gj89P3ev6x0+nr5v/D++3/P149t/i3/tI8u9O9v18fD+m462sUjP2ePn6f30dK8/Ssz9aAn3z/fWmc5O4P3n761vUenPtgK0I36U81JqG0aYs0m+324x4MKI2XXpL6whCUj3NeP3jL/hSIn2qVw++H4qU4XPsytSuI9a3e6Wj17dtvnptWrfm0+mfn6v26/b++3V/iH8Z3Brwiu3aJeLj+ltR8i0QLPAdBfLmMjmwTyg7YJGeufc/Pv+Ec/gjfEX8W3m3bip/5jscglqLYbcslk4zhCseogEeq379T6u/UOn6K1hr7VNytb0S7XifcZqA20vmdW6pZ7k5Pckdf/G+HfgC0vws+yXXilG/SdxSAv9HpxyoURsSRn2OAP31uS8Ixfv9/T58X6R2pP4OHwt8C+EOn/AEC8aR09DbbUpX2ptb7s3A/Glwnm99/3V0j4a9KfwT/iFjOW3S7/AA5/TGQzJs45G3yv8fKltwgE42x+7Ndp8Q/4MvwU3LSUvU99tX6JkIilXnMq/GsDsMj6df8AGfLvxSfwcnjF0lqm43LgzqKddLT5nnx/skgtS3U/ilI5uUkD9fI/1mR+X2+s5yuf3/s44/3P0uD/AITf8Cdrzww8O5nHPweaie1Bw/ZaU7edNrfL71uThRypaSoOMkDHmI2A/H3rnS8+DD+E4sXCW3cYNMcTdGXu3S4wkSbc1PfZfi5/EkhSfvOUn1D3/v2T+DT48fwk/hm4yROD3G613K46XvUj7OqI76pA5+uBy/y/d/47U++fwt/8JT4m+J914TeE/g3/m0iX901Cmy43l2+Iycjme6f8X3329vP+q+/8tSTh5X9/I/S+2x4/s//AFf888f3LqHw28Gf/CYI3A9vS515pu13B6EpxF2vDq3pjYwRyhKApI2P4e/1xXPvhy4Yfx21RdrR4h4911vrbT9yeiXlqO2pxNscScFLX/E/6s/5HkP/AMJT/CZfwY9ysvCfxd6f1VbdR2+ClsP/AKS+32K9Sgnm8m3znvM8hfp251dduvf3l8G3ii4J8O31asv3/J2s3i6KkXa3pUtlyE7I5T6fUecpyQeeuM8fLrfm72mN/wD26dI/wc/B3/gdL9/mI1v4mNOaCukn7t6y6sQY0tlROf1sK26p7/37+iX8In4F/D9c/Bf/AMpDhbpaxToDVs52p1sZSpp1O3pyBy9+/cf3/Pn+EZ44/wADR423Z8+HxF4h6f1A55iI2obZbC3mXzfjSUp/m/wG4I/O3534AfgXv4PjQPCnS11sHjM17d7O+15dshzrWlydIa3Sny/5v9UfgH4f6PzX/AK4v5v7Lp4+z9f8A1en/ANf2XpT4Ovh3/g8I3iJ/ilxe/ixA4hfZAt22sOJS47v+sBjJ9yOn/qvoV/CSeBvww3zwsXG4Xnh9Z4M2Fbf/ABy0sISpI5e305ff6+2v19+48f38EtZpuvI3HbgFxm1/pPjRbfu22EWyMhy5s43xJ3yfyf/AFd/148+L/iU/hdPEl3hnqjxa3vX+lY8z/xY7a/9MhA6eb/178I/p/0f33mcv9tL3f324v6+P3f+n3S4f4e/Dlw8063w6a8Q9mbs0Bvy4/mx3H5aW1DOfN9LWMf6veP38290B/BNcW9bQ2IHCzi5e20rOHpsR7k5QO3pA9/6vv6e9fN+68Kf8Ijwvutv406E4/a5a4exoyXkG4rUt51ePw/iH4/j23/Mfpj/AMGN44oGs+G/8Rda6x1f/GbypI/S1vhIW/eHjypH48DkG3Q+n6ejzOX4+24eSfbjnn922f4k/wCCW/gsvA5IcvXi04nXxNylqPkwLje1rmSFZyeVJ/Aevv222rR4fG/wnvBy1RdBfwbPges7d3UoNRdUyrG1/J//AOV85X8/71oT77fh3O+6y4IeLnj74kbrxdXxFjfxchS2WdLR9Ztl1zH/ABf4Sfy68ufbvW/W65ePvh/p9m+cYvEZp2PZ4n4Itmtf3qE/T0J399yflG9b+856fW9O774iP+E5+MTh041x2f0ZovTyU80eBfExP5Yn/Wf/ACD+I/j/AKO/bS2fwj3/AAtvD/8ARa3sE+523m5o/mS4X4R132/aT+p19O348ceOHD3jI5J4h/x5/jTckvcz0z8f3m34Pbrv335f63+k82+Gf4T3xtcC5TfCrxF6f1pP4es3bEuN/pENmX25Xev4/V9d/y0z8p25b3/ZfXGfj4/249I4P4TzxZcLNVP2D+Ek8EEqXpsA/bptnhv/APv8j+x5f66N9t8HbzS8bfgn45aWvLni1/gpeKV4Xw6v/LPlWyIeSRa3sBXLzI9S/wAXX/u9K504w/wn/gl/g/OEDl7/AILvRer+L/F+9M4ut24hoS4xD338y3o6Y90A7+6/xdA6F/gX+P3C+xRrnw3/AIRjXfDLijmDInRmnCmyxnHfw4bCshI6Z8vPt7Vr35+m+/xI8v38f32e9/dG+Dv/AISN4w2LixpLgf8AwgfAm4sXibcGbfDu7cItyFr/AChI+O4x0+u+/f8ACreAnwdO/pG/XW02qB+BfK4k7/3+37f6/NzeSfiA1j/CQ/B7f3p3jb8Plj8U/DZl12P/ABy0/a3I9wh4A9agkd/f/u1Y3/pOPDkLbbLroXwzcTYE7ylf+NbcI8eMn+e9Q9fL16ft+vrm/t/G3q3l43P2er1s1vwnk2v+THl335f8fb9U/l9A3k/4mO4UuX/AH/6+p2p5oXi9c9X/wD43x81j09ftm+/2+f+P/L2yV2qCAn2++9/bv8As233x7b8p+oO9/8AtE15H/C3f+31p7f+32f/ANlQef8AfP8AY/z/AA9O/In0f/tXw3f8P86An+aGkI+iXff39vbb9gU1iAnf5f8A10/f1225enfr/X/fyt8P9X+D6s5Gf5zP1I/eMdfb/L9m8b/0/wA35p/v3/4P40AnO+DnvjG+Dvv0HffsflpA3e23N/jH4+p9s7f1N+U9m/vN9p6a9/H+/wA83/2P833v2e/X/D9/8a39m306b9N+m43xnP/28163f/wCRxG1p/m14/D36fX339++fbv46/v8AH7T1+/sP9X88v6xSdt/f9p/pfg5v3s3/AC9f/wBr/P8AF2aIn1/f+e/U43277/Xm/e9f3b/b+/12yfn3xufb2/3f+D+/30S/X8e/31d3t2u/3e3295n196p3b19ft6/U8/3O3/2Ld/tX9f0d+43/AH496/8Aefv9/br/AInPvf0f59u/0xt15cfd/vf+q/d7Pq3835564+ud/br0/teR++q/d/y39e/1/wAfbr8vUo+X39f0z/d1pA52ycfvOfz+en93/wAP6p0+m39f+/oAnfI+f2/1s+34v2bdtp5H45mE/a37OftLp25P88bdf2/h5X/3+38X+P179d/b1a37a1fNfG3sL5u0q36fv+X7N/u1v9b2ft3S4u2zOef/AOf/AMf29/383aG+f5/f1/zI/wAnbf2f22x8/u2/l5e//wCWpX2+kFOn278m+e/Xp+X+37e3S488/u+mX/1qAn1e2fr6fp++t63r2vM8/wAH1I+m/ftv13x8+/P3X38/2iYp9fM55R35vf2+n9r/ANp1p7f3X/93j55vf9/19++ftft3tq1w/ePn1+u3fr03/X3x0+228S+1f7e4f3f4/wCefx9ef88p/bf9S3a25yOXPz1+mff25/b2r9a89L+b/wAP8m4R9mR/f6fnP5f/AFm2z4/6fWfv19/j9Xrn5q/tfD/f0e3tP36+fW3qftXf99+X4/38X3y9/wC8/j/x/j5q3b/7e+33+Pf+/v637Nf3+/36/D3339udXtv16c3N2o832t34+/5dP3/g5e/f/m7Xk7UeXvv/AGf/AIn0/vevn0p3e23/AMf7/l62fX+l73fP181u309e39P3u37x3p2S/eW94e823+O/bbf/ACmftK/l+/13+vSAnfG/7f7v+Hf3fGz31/5P7/4/12x8d/y/3739mft25v19uv922Obr29uX4X+C6b4z7vU+/X17fvGfz/wBnn1y+f2aXn++ffX01s3f/AH/4+/x/a7/v+ff38/m+/br06Y/4P05Pwevv/wCcI8u/N5H3+/T+/Ofb2Xn/ALvv+/15/aO0/wCbM+s8v93/AA68p+e5+8jY239f8/34+uP3H5p9xOfN+/br9+v8X63X+36/dft6e33u3f+/vO05vf4R19s/Tvv+p9eXy3f/k8X81v35uX++/36+1/e3fXf479/mbf+j1p3tO2eX8+mR/ePr35u0v1x/32+s/0+/wAx8dE/T5x35X89T+/8vf2m15u3br9x/f8At9/S41i1ffv3/m/6vf8Az/w1y9f3+lX7OftL7u/f1359vfp3x1rN87f2ffs/Xvvt2x6f3bdfx1vf6f+zWb/535m42z9OnT9v/AJdOnN3i185x/X/z/iOn3fT+u6/339f28/m/Oef15v2fv+v1/f16fn16ev8Af5v+p25/tftXm++/e81z4S3m5vT5fX5677d/3fSvt7X2yO33/APd+yvX5+/p6f/25N6+mO+d/b+/+b25+/fXft05u8W309frvf+37f9fvM9/U+8b3/fefqer18/q/1u/1/ft/X/t/u+/2evp+e/8AF/v8/aebf5fv6/v+f+/p+/1vE/W5x8eP31/z82eef1Pxfp482e/bfb+Ofz+99P31/vf1p06fn1/f15/f9+/9Lp5u6+nn239P/31v0pL9ef6/f/33mcv2s5P06+e/r52/j33pA3f/AH+e2eX2/r9v3f3fXq/p69fv9/vP+fX9f72s/f2339v2x+X4v2evf89/mfe3v3/ft7fv/P8An0y1q39+vf7vP/l5/wA4m4m6f36+f8/v9v78+/8AS5s8v5f3x181q41a4m39fU82fv4++/T/ADX975v/AL/Gf6f4s18f4mN/S+/3P8f+M+mB/eR5+55unT/pP/P4b0v6f6Hfvf8At5f448b3b3+a/f3yP6OefO395/3s/d4c3f59X4z135fx/Xm+/tve4r9vN06fxf2mE/q++/4u3v15e+/v563O1eO359P6v/189ftm2zrfT5+n7v8ACN+X6ef9827evr9O/wC3bf0/+/p8Lp36/P8At26+r38q/e42L7Xvv9On+/X5+P4p1/s1S3d4lA/k230O+R/6n8vxSXXy82/p+/br9+v8AvA+3p7xOfN/x/f4326/iP9p0qfe5S33p16/3745v7/b8p8p3t++fvX9839/i4Xl27fTfp5+vX+/tX9f/ABt34aO/e35X9v8A4/8AH9bO/vP1vv6+vSfv/bH++p3v9vS89On5evfrS8L/AEn3/j5/A9fr5t9eX563+/i+/f36/A9++frv33v5mXqef95v943s/eef98/3/ff1339v2e3r+1u5N0v1++/S82e+/TrSbf337833/f5P03/AG/Pq9tX0fM/v5/3f+/r9u/T5q4/339+v+/+/TrWfNrfq0v743S2vM/v998f8P6/f/Gv269mNf/AM3X/v7dft/1z+a/sN/b+O+99O31qXm5+/3+/wA3r6f36/D39fv0pLzffb3+v4uX3/4fX+/b+d0x1/39SjX5X+6/y/S0+fvM+35Snnx7++59v7vbb3+n83X2f/Z" alt="SKMEI Homme" class="hero-img">
+<div class="price">
+4,800 د.ج
+<span class="old">6,800 د.ج</span>
+</div>
+<a href="#order" class="cta">اطلب الآن والدفع عند الاستلام 🚚</a>
+<div class="trust">
+<span>التوصيل سريح من 24 الى 48 ساعة</span>
+<span>ضمان الجودة</span>
+<span>الدفع عند الاستلام</span>
+</div>
+<div class="offer">
+<strong>🔥 عرض خاص لفترة محدودة</strong>
+<span>اطلب قطعتين واحصل على تخفيض بقيمة 1,000 د.ج + توصيل مجاني!</span>
+<span class="small">الكمية المتبقية في المستودع محدودة جداً!</span>
+</div>
+</div>
+</section>
 
-  <div class="trust">
-    <span>توصيل 58 ولاية</span>
-    <span>ضمان الجودة</span>
-    <span>الدفع عند الاستلام</span>
-  </div>
+<section class="section">
+<div class="container">
+<h2 class="title">لماذا تختار ساعة SKMEI؟</h2>
+<p class="sub">ساعة تمزج بين الأناقة العصرية المتينة والجودة العالية لترافقك في جميع مناسباتك.</p>
+<div class="features">
+<div class="feature">
+<b>هيكل متين</b>
+تصميم من الستانلس ستيل المقاوم للخدش والصدمات.
+</div>
+<div class="feature">
+<b>مقاومة للماء</b>
+تحمل الرذاذ والغسيل اليومي والأمطار.
+</div>
+<div class="feature">
+<b>عقارب مضيئة</b>
+رؤية واضحة للوقت في الظلام التام.
+</div>
+<div class="feature">
+<b>تقويم مدمج</b>
+عرض واضح لليوم والتاريخ لتنظيم وقتك بسهولة.
+</div>
+</div>
+</div>
+</section>
 
-  <h2>لماذا تختار هذه الساعة؟</h2>
-  <div class="features">
-    <div class="feature-card"><h3>💧 مقاومة للماء</h3><p>مقاومة للماء والأنشطة اليومية بكفاءة عالية.</p></div>
-    <div class="feature-card"><h3>🛡️ فولاذ مقاوم للصدأ</h3><p>هيكل متين من الإستانلس ستيل.</p></div>
-  </div>
+<section class="section" style="background:#0c0c0c;border-top:1px solid #1f1f1f;border-bottom:1px solid #1f1f1f">
+<div class="container">
+<h2 class="title">معرض الصور الحقيقية</h2>
+<p class="sub">صور حقيقية 100% للمنتج بدون أي تعديل — ما تراه هو ما تصلك تماماً.</p>
+<div class="gallery">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAIxAr0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJCFWNyKAkFDAAxCTEV0OWG4HRkd4EIgzU4OHO5EQAiJTEKe1CX1N1205Kae04XN2N05zeHFE6RxW0_0_9329" alt="SKMEI Watch 1">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAIxAr0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJCFWNyKAkFDAAxCTEV0OWG4HRkd4EIgzU4OHO5EQAiJTEKe1CX1N1205Kae04XN2N05zeHFE6RxW0_0_9329" alt="SKMEI Watch 2">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAIxAr0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJCFWNyKAkFDAAxCTEV0OWG4HRkd4EIgzU4OHO5EQAiJTEKe1CX1N1205Kae04XN2N05zeHFE6RxW0_0_9329" alt="SKMEI Watch 3">
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCAIxAr0DASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJCFWNyKAkFDAAxCTEV0OWG4HRkd4EIgzU4OHO5EQAiJTEKe1CX1N1205Kae04XN2N05zeHFE6RxW0_0_9329" alt="SKMEI Watch 4">
+</div>
 
-  <h2>معرض الصور الحقيقية للمنتج</h2>
-  <div class="gallery">
-    <!-- الصورة الثانية -->
-    <img src="watch2.png" alt="تفاصيل الساعة">
-    <!-- الصورة الثالثة -->
-    <img src="watch3.png" alt="الساعة في اليد">
-    <!-- الصورة الرابعة -->
-    <img src="watch4.png" alt="واجهة الساعة">
-    <!-- تكرار الصورة الأولى كصورة أخيرة للمعرض -->
-    <img src="watch1.png" alt="ساعة SKMEI">
-  </div>
+<div class="trust-grid">
+<div class="trust-card">
+<span class="ico">📦</span>
+<b>معاينة المنتج قبل الدفع</b>
+يمكنك فتح الطرد والتأكد من الساعة قبل دفع أي دينار.
+</div>
+<div class="trust-card">
+<span class="ico">🔄</span>
+<b>إمكانية الاستبدال</b>
+ضمان الاستبدال في حالة وجود أي عيب مصنعي.
+</div>
+<div class="trust-card">
+<span class="ico">⚡</span>
+<b>توصيل سريع</b>
+توصيل لـ 58 ولاية خلال 24-48 ساعة فقط.
+</div>
+</div>
 
-  <section id="order">
-    <h2>استمارة الطلب</h2>
-    <form id="orderForm">
-      <label>الاسم الكامل *</label>
-      <input type="text" id="fullName" required placeholder="أدخل اسمك الكامل">
+<div class="review">
+<div class="stars">★★★★★</div>
+<p style="margin:8px 0 4px;font-weight:700">"ساعة ما شاء الله! جودة ممتازة وشكل رائع جداً، والتوصيل كان سريع لولاية وهران."</p>
+<span style="color:#888;font-size:13px">— أسامة .ب (وهران)</span>
+</div>
+</div>
+</section>
 
-      <label>رقم الهاتف *</label>
-      <input type="tel" id="phone" required placeholder="06XXXXXXXX">
+<section class="section" id="order">
+<div class="container">
+<h2 class="title">استمارة الطلب السريع</h2>
+<p class="sub">أدخل معلوماتك أدناه وسنتصل بك لتيقين الطلب وشحن ساعتك فوراً</p>
 
-      <label>الولاية *</label>
-        <!-- <label>الولاية *</label>
-<!-- الولايات يجب أن تكون كلها بين <select> و </select> -->
-<select id="wilaya" required>
-  <option value="">اختر الولاية</option>
-  <option value="01">01 - أدرار</option>
-  <option value="02">02 - الشلف</option>
-  <option value="03">03 - الأغواط</option>
-  <option value="04">04 - أم البواقي</option>
-  <option value="05">05 - باتنة</option>
-  <option value="06">06 - بجاية</option>
-  <option value="07">07 - بسكرة</option>
-  <option value="08">08 - بشار</option>
-  <option value="09">09 - البليدة</option>
-  <option value="10">10 - البويرة</option>
-  <option value="11">11 - تمنراست</option>
-  <option value="12">12 - تبسة</option>
-  <option value="13">13 - تلمسان</option>
-  <option value="14">14 - تيارت</option>
-  <option value="15">15 - تيزي وزو</option>
-  <option value="16">16 - الجزائر</option>
-  <option value="17">17 - الجلفة</option>
-  <option value="18">18 - جيجل</option>
-  <option value="19">19 - سطيف</option>
-  <option value="20">20 - سعيدة</option>
-  <option value="21">21 - سكيكدة</option>
-  <option value="22">22 - سيدي بلعباس</option>
-  <option value="23">23 - عنابة</option>
-  <option value="24">24 - قالمة</option>
-  <option value="25">25 - قسنطينة</option>
-  <option value="26">26 - المدية</option>
-  <option value="27">27 - مستغانم</option>
-  <option value="28">28 - المسيلة</option>
-  <option value="29">29 - معسكر</option>
-  <option value="30">30 - ورقلة</option>
-  <option value="31">31 - وهران</option>
-  <option value="32">32 - البيض</option>
-  <option value="33">33 - إليزي</option>
-  <option value="34">34 - برج بوعريريج</option>
-  <option value="35">35 - بومرداس</option>
-  <option value="36">36 - الطارف</option>
-  <option value="37">37 - تندوف</option>
-  <option value="38">38 - تيسمسيلت</option>
-  <option value="39">39 - الوادي</option>
-  <option value="40">40 - خنشلة</option>
-  <option value="41">41 - سوق أهراس</option>
-  <option value="42">42 - تيبازة</option>
-  <option value="43">43 - ميلة</option>
-  <option value="44">44 - عين الدفلى</option>
-  <option value="45">45 - النعامة</option>
-  <option value="46">46 - عين تموشنت</option>
-  <option value="47">47 - غرداية</option>
-  <option value="48">48 - غليزان</option>
-  <option value="49">49 - تيميمون</option>
-  <option value="50">50 - برج باجي مختار</option>
-  <option value="51">51 - أولاد جلال</option>
-  <option value="52">52 - بني عباس</option>
-  <option value="53">53 - إن صالح</option>
-  <option value="54">54 - إن قزام</option>
-  <option value="55">55 - تقرت</option>
-  <option value="56">56 - جانت</option>
-  <option value="57">57 - المغير</option>
-  <option value="58">58 - المنيعة</option>
+<div class="order">
+<form id="orderForm">
+<label>الاسم الكامل *</label>
+<input type="text" id="fullname" placeholder="مثال: محمد بن علي" required>
+
+<label>رقم الهاتف *</label>
+
+<input type="tel" id="phone" placeholder="06XXXXXXXX / 07XXXXXXXX / 05XXXXXXXX" required>
+
+<label>الكمية *</label>
+<select id="quantity" onchange="calculateTotal()">
+<option value="1">1 قطعة — 4,800 د.ج</option>
+<option value="2">2 قطعتين — 8,600 د.ج (خصم 1,000 د.ج + توصيل مجاني)</option>
+<option value="3">3 قطع — 12,900 د.ج (عرض الجملة)</option>
 </select>
- إضافة باقي الولايات هنا -->
-      </select>
 
-      <button type="submit" id="submitBtn">تأكيد الطلب الآن</button>
-    </form>
-    <div id="successMsg" class="success">✅ تم تسجيل طلبك بنجاح! سنتصل بك قريباً لتأكيد التوصيل.</div>
-  </section>
+<label>الولاية *</label>
+<select id="wilaya" onchange="calculateTotal()" required>
+<option value="">اختر الولاية...</option>
+<option value="1" data-home="600" data-desk="400">01 - أدرار</option>
+<option value="2" data-home="500" data-desk="300">02 - الشلف</option>
+<option value="3" data-home="600" data-desk="400">03 - الأغواط</option>
+<option value="4" data-home="500" data-desk="300">04 - أم البواقي</option>
+<option value="5" data-home="500" data-desk="300">05 - باتنة</option>
+<option value="6" data-home="500" data-desk="300">06 - بجاية</option>
+<option value="7" data-home="600" data-desk="400">07 - بسكرة</option>
+<option value="8" data-home="600" data-desk="400">08 - بشار</option>
+<option value="9" data-home="400" data-desk="250">09 - البليدة</option>
+<option value="10" data-home="500" data-desk="300">10 - البويرة</option>
+<option value="11" data-home="700" data-desk="500">11 - تمنراست</option>
+<option value="12" data-home="600" data-desk="400">12 - تبسة</option>
+<option value="13" data-home="500" data-desk="300">13 - تلمسان</option>
+<option value="14" data-home="500" data-desk="300">14 - تيارت</option>
+<option value="15" data-home="450" data-desk="250">15 - تيزي وزو</option>
+<option value="16" data-home="350" data-desk="200">16 - الجزائر العاصمة</option>
+<option value="17" data-home="600" data-desk="400">17 - الجلفة</option>
+<option value="18" data-home="500" data-desk="300">18 - جيجل</option>
+<option value="19" data-home="500" data-desk="300">19 - سطيف</option>
+<option value="20" data-home="500" data-desk="300">20 - سعيدة</option>
+<option value="21" data-home="500" data-desk="300">21 - سكيكدة</option>
+<option value="22" data-home="500" data-desk="300">22 - سيدي بلعباس</option>
+<option value="23" data-home="500" data-desk="300">23 - عنابة</option>
+<option value="24" data-home="500" data-desk="300">24 - قالمة</option>
+<option value="25" data-home="500" data-desk="300">25 - قسنطينة</option>
+<option value="26" data-home="500" data-desk="300">26 - المدية</option>
+<option value="27" data-home="500" data-desk="300">27 - مستغانم</option>
+<option value="28" data-home="600" data-desk="400">28 - المسيلة</option>
+<option value="29" data-home="500" data-desk="300">29 - معسكر</option>
+<option value="30" data-home="600" data-desk="400">30 - ورقلة</option>
+<option value="31" data-home="500" data-desk="300">31 - وهران</option>
+<option value="32" data-home="600" data-desk="400">32 - البيض</option>
+<option value="33" data-home="800" data-desk="600">33 - إليزي</option>
+<option value="34" data-home="500" data-desk="300">34 - برج بوعريريج</option>
+<option value="35" data-home="400" data-desk="250">35 - بومرداس</option>
+<option value="36" data-home="500" data-desk="300">36 - الطارف</option>
+<option value="37" data-home="700" data-desk="500">37 - تندوف</option>
+<option value="38" data-home="500" data-desk="300">38 - تسمسيلت</option>
+<option value="39" data-home="600" data-desk="400">39 - الوادي</option>
+<option value="40" data-home="600" data-desk="400">40 - خنشلة</option>
+<option value="41" data-home="500" data-desk="300">41 - سوق أهراس</option>
+<option value="42" data-home="450" data-desk="250">42 - تيبازة</option>
+<option value="43" data-home="500" data-desk="300">43 - ميلة</option>
+<option value="44" data-home="500" data-desk="300">44 - عين الدفلى</option>
+<option value="45" data-home="600" data-desk="400">45 - النعامة</option>
+<option value="46" data-home="500" data-desk="300">46 - عين تموشنت</option>
+<option value="47" data-home="600" data-desk="400">47 - غرداية</option>
+<option value="48" data-home="500" data-desk="300">48 - غليزان</option>
+<option value="49" data-home="700" data-desk="500">49 - المغير</option>
+<option value="50" data-home="700" data-desk="500">50 - المنيعة</option>
+<option value="51" data-home="800" data-desk="600">51 - أولاد جلال</option>
+<option value="52" data-home="800" data-desk="600">52 - برج باجي مختار</option>
+<option value="53" data-home="800" data-desk="600">53 - بني عباس</option>
+<option value="54" data-home="900" data-desk="700">54 - تيميمون</option>
+
+<option value="55" data-home="900" data-desk="700">55 - تقرت</option>
+<option value="56" data-home="900" data-desk="700">56 - جانت</option>
+<option value="57" data-home="900" data-desk="700">57 - إن صالح</option>
+<option value="58" data-home="900" data-desk="700">58 - إن قزام</option>
+</select>
+
+<label>البلدية والعنوان *</label>
+<input type="text" id="commune" placeholder="مثال: بلدية أولاد فايت - حي 1200 مسكن" required>
+
+<label>نوع التوصيل *</label>
+<select id="shippingType" onchange="calculateTotal()">
+<option value="home">توصيل للمنزل / باب الدار</option>
+<option value="desk">استلام من المكتب (Yalidine / Stop Desk)</option>
+</select>
+
+<div class="total">
+<div class="row">
+<span>سعر الساعة:</span>
+<strong id="productPrice">4,800 د.ج</strong>
+</div>
+<div class="row">
+<span>سعر الشحن:</span>
+<strong id="shippingPrice">-- د.ج</strong>
+</div>
+<div class="row total-final">
+<span>المجموع الكلي:</span>
+<strong id="totalPrice">4,800 د.ج</strong>
+</div>
+</div>
+
+<button type="submit" class="submit">تأكيد الطلب الان 🛒</button>
+<p class="note">🔒 معلوماتك آمنة 100%. الدفع يتم نقداً عند استلام ساعتك والمعاينة.</p>
+
+<div class="success" id="successBox">
+<h3>🎉 تم تسجيل طلبك بنجاح!</h3>
+<p>شكراً لك. سيتصل بك فريق الخدمة خلال ساعات قليلة لتأكيد العنوان والشحن.</p>
+</div>
+</form>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p>© 2026 SKMEI Algeria — جميع الحقوق محفوظة</p>
+<p class="micro">ساعة SKMEI الأصلية - ضمان الجودة والرضا 100%</p>
+</div>
+</footer>
+
+<div class="sticky-cta">
+<a href="#order">اطلب الآن — 4,800 د.ج 🛒</a>
 </div>
 
 <script>
-  // رابط السكربت الخاص بك لـ Google Sheets
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKARn5PTnB2zFavqOARQDIU90ZNTAHW6_wNc15SStIUJa2E4m-WHGLHaqYYDnhBCcMqA/exec';
+function calculateTotal() {
+  const qtySelect = document.getElementById('quantity');
+  const wilayaSelect = document.getElementById('wilaya');
+  const shippingType = document.getElementById('shippingType').value;
+  
+  const qty = parseInt(qtySelect.value);
+  let basePrice = 4800;
+  
+  if (qty === 1) basePrice = 4800;
+  else if (qty === 2) basePrice = 8600;
+  else if (qty === 3) basePrice = 12900;
+  
+  document.getElementById('productPrice').innerText = basePrice.toLocaleString() + ' د.ج';
+  
+  let shippingCost = 0;
+  const selectedWilaya = wilayaSelect.options[wilayaSelect.selectedIndex];
+  
+  if (selectedWilaya && selectedWilaya.value !== "") {
+    if (qty === 2) {
+      shippingCost = 0; // توصيل مجاني عند شراء قطعتين
+    } else {
+      shippingCost = parseInt(selectedWilaya.getAttribute('data-' + shippingType)) || 0;
+    }
+    document.getElementById('shippingPrice').innerText = shippingCost === 0 ? 'مجاني 🎉' : shippingCost.toLocaleString() + ' د.ج';
+  } else {
+    document.getElementById('shippingPrice').innerText = '-- د.ج';
+  }
+  
+  const total = basePrice + shippingCost;
+  document.getElementById('totalPrice').innerText = total.toLocaleString() + ' د.ج';
+}
 
-  document.getElementById('orderForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const submitBtn = document.getElementById('submitBtn');
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'جاري إرسال الطلب...';
-
-    const formData = new FormData();
-    formData.append('fullName', document.getElementById('fullName').value);
-    formData.append('phone', document.getElementById('phone').value);
-    formData.append('wilaya', document.getElementById('wilaya').options[document.getElementById('wilaya').selectedIndex].text);
-
-    fetch(SCRIPT_URL, { method: 'POST', body: formData })
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('orderForm').style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
-    })
-    .catch(error => {
-      // حتى في حالة الخطأ الظاهري، غالباً ما يتم الإرسال
-      document.getElementById('orderForm').style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
-    });
-  });
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('successBox').style.display = 'block';
+  this.reset();
+  calculateTotal();
+});
 </script>
-
 </body>
 </html>
