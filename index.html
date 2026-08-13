@@ -9,7 +9,7 @@
     :root{--bg:#080808;--card:#111;--gold:#d8b15a;--text:#fff;--muted:#bdbdbd;--green:#18bb6a;}
     *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#050505,#111);color:var(--text);font-family:Arial,sans-serif;direction:rtl;text-align:right}
     .container{max-width:1000px;margin:auto;padding:0 15px}
-    .hero{padding:20px 0 14px;text-align:center;background:radial-gradient(circle at 50% 10%,#252525 0,#090909 55%)}
+    .hero{padding:30px 0 20px;text-align:center;background:radial-gradient(circle at 50% 10%,#252525 0,#090909 55%)}
     .badge{display:inline-block;border:1px solid #333;border-radius:999px;padding:7px 13px;color:#eee;font-size:13px;margin-bottom:10px}
     h1{font-size:clamp(30px,5vw,50px);margin:10px 0 0;letter-spacing:-1px}
     .hero p{color:#ddd;max-width:680px;margin:0 auto 18px}
@@ -17,7 +17,7 @@
     .price{font-size:36px;font-weight:900;color:var(--gold);margin:10px 0}
     .old{color:#777;text-decoration:line-through;font-size:18px}
     .cta{display:inline-block;background:var(--green);color:white;text-decoration:none;font-weight:900;padding:15px 28px;border-radius:14px;font-size:18px;margin-top:10px}
-    .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px}
+    .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:15px}
     .trust span{background:#101010;border:1px solid #2b2b2b;border-radius:12px;padding:8px 11px;color:#eee;font-size:12px}
     section{padding:40px 0}
     .title{text-align:center;font-size:30px;margin:0 0 22px}
@@ -26,12 +26,12 @@
     .gallery img{width:100%;border-radius:18px;display:block;background:#1a1a1a;box-shadow:0 8px 30px #000}
     .features{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     .feature{background:linear-gradient(145deg,#151515,#0d0d0d);border:1px solid #2b2b2b;border-radius:16px;padding:18px;text-align:center}
+    .feature h3{color:var(--gold);margin:10px 0 5px;font-size:18px}
+    .feature p{color:var(--muted);font-size:14px;margin:0}
     .order{background:linear-gradient(145deg,#181818,#0b0b0b);border:1px solid #333;border-radius:22px;padding:22px;max-width:600px;margin:auto}
     label{display:block;margin:12px 0 6px;font-weight:700}
     input,select{width:100%;padding:14px;border-radius:11px;border:1px solid #444;background:#080808;color:#fff;font-size:16px}
-    .row{display:flex;justify-content:space-between;gap:15px;margin:15px 0;color:#ddd}
-    .row strong{color:#fff} .total-final{font-size:22px;font-weight:900;color:var(--gold);border-top:1px solid #333;padding-top:12px}
-    .submit{width:100%;border:0;background:var(--green);color:#fff;font-size:19px;font-weight:900;padding:16px;border-radius:14px;cursor:pointer;margin-top:15px}
+    .submit{width:100%;border:0;background:var(--green);color:#fff;font-size:19px;font-weight:900;padding:16px;border-radius:14px;cursor:pointer;margin-top:20px}
     .success{display:none;margin-top:20px;padding:20px;background:#052217;border:1px solid #18bb6a;border-radius:14px;text-align:center;color:#fff}
     footer{padding:30px 0;text-align:center;color:#888;font-size:11px}
     @media(max-width:729px){.features{grid-template-columns:repeat(2,1fr)}}
@@ -40,23 +40,72 @@
 </head>
 <body>
 
+  <!-- قسم واجهة المنتج الرئيسية -->
   <section class="hero">
     <div class="container">
       <span class="badge">ساعة رجالية فخمة</span>
       <h1>SKMEI مقاومة للماء والصدأ</h1>
-      <p>تصميم أنيق ومتين يناسب جميع الإطلالات</p>
+      <p>تصميم أنيق ومتين يناسب جميع الإطلالات والأنشطة اليومية</p>
+      
+      <!-- صورة المنتج الرئيسية -->
+      <img class="hero-img" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800" alt="SKMEI Watch">
+      
       <div class="price">2,900 د.ج <span class="old">4,500 د.ج</span></div>
       <a class="cta" href="#order">اطلب الآن - التوصيل سريع</a>
+
+      <div class="trust">
+        <span>توصيل 58 ولاية</span>
+        <span>ضمان الجودة</span>
+        <span>الدفع عند الاستلام</span>
+      </div>
     </div>
   </section>
 
+  <!-- قسم المزايا -->
+  <section>
+    <div class="container">
+      <h2 class="title">لماذا تختار هذه الساعة؟</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>💧 مقاومة للماء</h3>
+          <p>مقاومة للماء والأنشطة اليومية بكفاءة عالية.</p>
+        </div>
+        <div class="feature">
+          <h3>🛡️ فولاذ مقاوم للصدأ</h3>
+          <p>هيكل متين من الإستانلس ستيل الفاخر.</p>
+        </div>
+        <div class="feature">
+          <h3>✨ عقارب مضيئة</h3>
+          <p>قراءة سهلة ومريحة للوقت في الظلام.</p>
+        </div>
+        <div class="feature">
+          <h3>📅 عرض التاريخ</h3>
+          <p>نافذة مدمجة لعرض التاريخ بدقة.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم معرض الصور -->
+  <section>
+    <div class="container">
+      <h2 class="title">معرض الصور</h2>
+      <p class="sub">معاينة تفاصيل الساعة من مختلف الزوايا</p>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600" alt="صورة 1">
+        <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=600" alt="صورة 2">
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم استمارة الطلب -->
   <section id="order">
     <div class="container">
       <h2 class="title">استمارة الطلب</h2>
       <div class="order">
         <form id="orderForm">
           <label>الاسم الكامل *</label>
-          <input type="text" id="fullName" required placeholder="أدخل اسمك">
+          <input type="text" id="fullName" required placeholder="أدخل اسمك الكامل">
 
           <label>رقم الهاتف *</label>
           <input type="tel" id="phone" required placeholder="06XXXXXXXX">
@@ -74,7 +123,7 @@
           <label>البلدية *</label>
           <input type="text" id="commune" required placeholder="أدخل اسم البلدية">
 
-          <label>العنوان</label>
+          <label>العنوان (اختياري)</label>
           <input type="text" id="address" placeholder="الحي / الشارع">
 
           <label>نوع التوصيل *</label>
@@ -96,6 +145,7 @@
     </div>
   </section>
 
+  <!-- السكربت المربوط بـ Google Sheets -->
   <script>
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxKARn5PTnB2zFavqOARQDIU90ZNTAHW6_wNc15SStIUJa2E4m-WHGLHaqYYDnhBCcMqA/exec';
 
@@ -122,7 +172,6 @@
         document.getElementById('successMsg').style.display = 'block';
       })
       .catch(error => {
-        alert('تم إرسال طلبك بنجاح!');
         document.getElementById('orderForm').style.display = 'none';
         document.getElementById('successMsg').style.display = 'block';
       });
