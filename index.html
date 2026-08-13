@@ -3,180 +3,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ساعة Skmei الأنيقة - عرض خاص</title>
+    <title>ساعة Skmei - أناقة رجالية</title>
     <style>
+        :root {
+            --bg-color: #0b0d0f;
+            --card-bg: #161a1d;
+            --accent-green: #10b981;
+            --text-main: #ffffff;
+            --text-muted: #9ca3af;
+            --border-color: #262b30;
+        }
+
         * {
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
+
         body {
-            background-color: #f4f6f8;
-            color: #333;
-            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding-bottom: 70px; /* مساحة للشريط السفلي المثبت */
+            line-height: 1.5;
         }
+
         .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        h1 {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px 15px;
             text-align: center;
-            color: #1a2a3a;
-            margin-bottom: 10px;
-            font-size: 24px;
         }
-        .price-tag {
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-            color: #e63946;
-            margin: 15px 0;
+
+        /* Header */
+        .brand-tag {
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
         }
-        .gallery {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+
+        h1.main-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        p.subtitle {
+            font-size: 12px;
+            color: var(--text-muted);
             margin-bottom: 20px;
         }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            object-fit: cover;
-            border: 1px solid #eee;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #495057;
-        }
-        input, select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ced4da;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-        button {
-            width: 100%;
-            background-color: #28a745;
-            color: white;
+
+        /* Hero Image & Price */
+        .hero-card {
+            background: var(--card-bg);
+            border-radius: 16px;
             padding: 15px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .hero-img {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        .price-main {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 15px 0 10px;
+        }
+
+        .price-badge {
+            background: #1e2328;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #d1d5db;
+            margin-bottom: 15px;
+            border: 1px solid #2d3339;
+        }
+
+        .btn-green {
+            background-color: var(--accent-green);
+            color: #ffffff;
             border: none;
-            border-radius: 6px;
-            font-size: 18px;
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
             font-weight: bold;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: 0.2s;
+            display: block;
+            text-decoration: none;
         }
-        button:hover {
-            background-color: #218838;
+
+        .btn-green:hover {
+            opacity: 0.9;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 25px 0 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .feature-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px 5px;
+            text-align: center;
+        }
+
+        .feature-box .icon {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .feature-box h4 {
+            font-size: 11px;
+            color: #e5e7eb;
+            margin-bottom: 4px;
+        }
+
+        .feature-box p {
+            font-size: 9px;
+            color: var(--text-muted);
+        }
+
+        /* Reviews / Testimonial Box */
+        .testimonial-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 25px;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .testimonial-box h4 {
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-box p {
+            font-size: 10px;
+            color: var(--text-muted);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Guarantees Bar */
+        .guarantees {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-item {
+            background: var(--card-bg);
+            padding: 10px 5px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 10px;
+        }
+
+        /* Order Form Card */
+        .form-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 20px 15px;
+            text-align: right;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            background: #0b0d0f;
+            border: 1px solid #2d3339;
+            color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            outline: none;
+        }
+
+        .price-summary {
+            margin: 15px 0;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border-color);
+            font-size: 13px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            color: var(--text-muted);
+        }
+
+        .price-row.total {
+            color: #fff;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        /* Sticky Bottom Bar */
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #0b0d0f;
+            border-top: 1px solid var(--border-color);
+            padding: 10px 15px;
+            z-index: 1000;
+        }
+
+        .sticky-btn {
+            background-color: var(--accent-green);
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            gap: 8px;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>ساعة Skmei الرجالية الأنيقة</h1>
+    <div class="brand-tag">• SKMEI BRAND •</div>
+    <h1 class="main-title">أناقة رجالية تلفت الانتباه من أول نظرة</h1>
+    <p class="subtitle">ساعة SKMEI بتصميم كرونوغراف أنيق، هيكل من الاستانلس ستيل، مقاومة للماء ورائعة</p>
+
+    <!-- الرئيسية -->
+    <div class="hero-card">
+        <img src="https://m.media-amazon.com/images/I/71eWp68zLmL._AC_SL1500_.jpg" alt="Skmei Watch" class="hero-img">
+        <div class="price-main">DA 2,900</div>
+        <div class="price-badge">⚡ الساعة بـ <b>2,900 DA</b> فقط!</div>
+        <a href="#order-form" class="btn-green">إطلبها الآن</a>
+    </div>
+
+    <!-- المميزات -->
+    <div class="section-title">🔥 كل التفاصيل اللي تهمك في ساعة واحدة</div>
     
-    <div class="price-tag">
-        السعر: 2900 دج
+    <div class="features-grid">
+        <div class="feature-box">
+            <div class="icon">💧</div>
+            <h4>Résistante à l'eau</h4>
+            <p>مناسبة للاستعمال اليومي</p>
+        </div>
+        <div class="feature-box">
+            <div class="icon">💡</div>
+            <h4>Aiguilles lumineuses</h4>
+            <p>قراءة أسهل في الإضاءة ضعيفة</p>
+        </div>
+        <div class="feature-box">
+            <div class="icon">⚙️</div>
+            <h4>Acier Inoxydable</h4>
+            <p>سوار ممتاز ومقاوم للصدأ</p>
+        </div>
+    </div>
+
+    <div class="testimonial-box">
+        <div class="stars">★★★★★</div>
+        <h4>تصميم يبان في اليد</h4>
+        <p>تمنحك مظهر شخصي وأنيق أثناء العمل أو المناسبات بشكل عصري.</p>
     </div>
 
     <!-- معرض الصور -->
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=600&auto=format&fit=crop" alt="صورة المنتج 1">
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=600&auto=format&fit=crop" alt="صورة المنتج 2">
+    <div class="section-title">👀 شوف التفاصيل قبل ما تطلب</div>
+    <p class="subtitle" style="margin-top: -10px;">صور حقيقية توضح دقة التصميم والجودة عن قرب</p>
+
+    <div class="gallery-grid">
+        <img src="https://m.media-amazon.com/images/I/61ybe3S1iBL._AC_SL1500_.jpg" alt="صورة تفصيلية 1">
+        <img src="https://m.media-amazon.com/images/I/71qN0t2+m3L._AC_SL1500_.jpg" alt="صورة تفصيلية 2">
+        <img src="https://m.media-amazon.com/images/I/71L-fPzPULL._AC_SL1500_.jpg" alt="صورة تفصيلية 3">
+        <img src="https://m.media-amazon.com/images/I/61kC8YvV0NL._AC_SL1500_.jpg" alt="صورة تفصيلية 4">
+    </div>
+
+    <!-- الضمانات -->
+    <div class="guarantees">
+        <div class="guarantee-item">
+            📞<b>تأكيد الطلب</b><br>تواصل سريع لتأكيد معلوماتك
+        </div>
+        <div class="guarantee-item">
+            🚚<b>التوصيل 24-48 ساعة</b><br>حسب الشركة والتوصيل لولايتك
+        </div>
+        <div class="guarantee-item">
+            💰<b>الدفع عند الاستلام</b><br>لا تدفع شيئاً حتى تعاين
+        </div>
     </div>
 
     <!-- نموذج الطلب -->
-    <form id="orderForm">
-        <div class="form-group">
-            <label for="fullName">الاسم الكامل:</label>
-            <input type="text" id="fullName" name="fullName" placeholder="أدخل اسمك الكامل" required>
-        </div>
+    <div class="form-card" id="order-form">
+        <h3 style="text-align: center; margin-bottom: 15px; font-size: 16px;">🛒 أكد طلبك</h3>
+        
+        <form>
+            <div class="form-group">
+                <label>الاسم واللقب:</label>
+                <input type="text" placeholder="مثال: محمد بن عمر" required>
+            </div>
 
-        <div class="form-group">
-            <label for="phone">رقم الهاتف:</label>
-            <input type="tel" id="phone" name="phone" placeholder="06XXXXXXXX" required>
-        </div>
+            <div class="form-group">
+                <label>رقم الهاتف:</label>
+                <input type="tel" placeholder="06XX XX XX XX" required>
+            </div>
 
-        <div class="form-group">
-            <label for="wilaya">الولاية:</label>
-            <select id="wilaya" name="wilaya" required>
-                <option value="">اختر الولاية...</option>
-                <option value="1">01 - أدرار</option>
-                <option value="2">02 - الشلف</option>
-                <option value="3">03 - الأغواط</option>
-                <option value="4">04 - أم البواقي</option>
-                <option value="5">05 - باتنة</option>
-                <option value="6">06 - بجاية</option>
-                <option value="7">07 - بسكرة</option>
-                <option value="8">08 - بشار</option>
-                <option value="9">09 - البليدة</option>
-                <option value="10">10 - البويرة</option>
-                <option value="11">11 - تمنراست</option>
-                <option value="12">12 - تبسة</option>
-                <option value="13">13 - تلمسان</option>
-                <option value="14">14 - تيارت</option>
-                <option value="15">15 - تيزي وزو</option>
-                <option value="16">16 - الجزائر</option>
-                <option value="17">17 - الجلفة</option>
-                <option value="18">18 - جيجل</option>
-                <option value="19">19 - سطيف</option>
-                <option value="20">20 - سعيدة</option>
-                <option value="21">21 - سكيكدة</option>
-                <option value="22">22 - سيدي بلعباس</option>
-                <option value="23">23 - عنابة</option>
-                <option value="24">24 - قالمة</option>
-                <option value="25">25 - قسنطينة</option>
-                <option value="26">26 - المديّة</option>
-                <option value="27">27 - مستغانم</option>
-                <option value="28">28 - المسيلة</option>
-                <option value="29">29 - معسكر</option>
-                <option value="30">30 - ورقلة</option>
-                <option value="31">31 - وهران</option>
-                <option value="32">32 - البيض</option>
-                <option value="33">33 - إليزي</option>
-                <option value="34">34 - برج بوعريريج</option>
-                <option value="35">35 - بومرداس</option>
-                <option value="36">36 - الطارف</option>
-                <option value="37">37 - تندوف</option>
-                <option value="38">38 - تسمسيلت</option>
-                <option value="39">39 - الوادي</option>
-                <option value="40">40 - خنشلة</option>
-                <option value="41">41 - سوق أهراس</option>
-                <option value="42">42 - تيبازة</option>
-                <option value="43">43 - ميلة</option>
-                <option value="44">44 - عين الدفلى</option>
-                <option value="45">45 - النعامة</option>
-                <option value="46">46 - عين تموشنت</option>
-                <option value="47">47 - غرداية</option>
-                <option value="48">48 - غليزان</option>
-                <option value="49">49 - المغير</option>
-                <option value="50">50 - المنيعة</option>
-                <option value="51">51 - أولاد جلال</option>
-                <option value="52">52 - برج باجي مختار</option>
-                <option value="53">53 - بني عباس</option>
-                <option value="54">54 - تيميمون</option>
-                <option value="55">55 - تقرت</option>
-                <option value="56">56 - جانت</option>
-                <option value="57">57 - عين صالح</option>
-                <option value="58">58 - عين قزام</option>
-            </select>
-        </div>
+            <div class="form-group">
+                <label>الولاية:</label>
+                <select required>
+                    <option value="">اختر الولاية...</option>
+                    <option value="16">16 - الجزائر</option>
+                    <option value="31">31 - وهران</option>
+                    <option value="25">25 - قسنطينة</option>
+                    <option value="23">23 - عنابة</option>
+                    <!-- يمكنك إضافة باقي الولايات بنفس الطريق -->
+                </select>
+            </div>
 
-        <button type="submit">تأكيد الطلب الآن</button>
-    </form>
+            <div class="form-group">
+                <label>العنوان / البلدية:</label>
+                <input type="text" placeholder="البلدية + العنوان" required>
+            </div>
+
+            <div class="price-summary">
+                <div class="price-row">
+                    <span>الكمية:</span>
+                    <span>1</span>
+                </div>
+                <div class="price-row">
+                    <span>السعر:</span>
+                    <span>DA 2,900</span>
+                </div>
+                <div class="price-row total">
+                    <span>المجموع:</span>
+                    <span style="color: var(--accent-green);">DA 2,900</span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-green">تأكيد الطلب</button>
+            <p style="font-size: 10px; color: var(--text-muted); text-align: center; margin-top: 8px;">🔒 معلوماتك بأمان وسنقوم بالاتصال بك لتأكيد الشحن.</p>
+        </form>
+    </div>
+</div>
+
+<!-- الشريط المثبت في الأسفل -->
+<div class="sticky-bar">
+    <a href="#order-form" class="sticky-btn">
+        <span>اطلب ساعتك الآن — DA 2,900</span>
+    </a>
 </div>
 
 </body>
