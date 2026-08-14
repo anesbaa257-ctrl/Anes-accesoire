@@ -3,413 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ساعة Skmei - أناقة رجالية</title>
+    <title>ساعة Skmei - طلب سريع</title>
+    
+    <!-- 1️⃣ كود الـ CSS (التصميم والألوان) -->
     <style>
-        :root {
-            --bg-color: #0b0d0f;
-            --card-bg: #161a1d;
-            --accent-green: #10b981;
-            --text-main: #ffffff;
-            --text-muted: #9ca3af;
-            --border-color: #262b30;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            padding-bottom: 70px; /* مساحة للشريط السفلي المثبت */
-            line-height: 1.5;
-        }
-
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px 15px;
-            text-align: center;
-        }
-
-        /* Header */
-        .brand-tag {
-            font-size: 11px;
-            color: var(--text-muted);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-
-        h1.main-title {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        p.subtitle {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-
-        /* Hero Image & Price */
-        .hero-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 15px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 20px;
-        }
-
-        .hero-img {
-            width: 100%;
-            border-radius: 12px;
-            display: block;
-        }
-
-        .price-main {
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--text-main);
-            margin: 15px 0 10px;
-        }
-
-        .price-badge {
-            background: #1e2328;
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 13px;
-            color: #d1d5db;
-            margin-bottom: 15px;
-            border: 1px solid #2d3339;
-        }
-
-        .btn-green {
-            background-color: var(--accent-green);
+            background-color: #0b0d0f;
             color: #ffffff;
-            border: none;
-            width: 100%;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.2s;
-            display: block;
-            text-decoration: none;
-        }
-
-        .btn-green:hover {
-            opacity: 0.9;
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin: 25px 0 15px;
+            font-family: system-ui, sans-serif;
+            padding: 20px;
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 6px;
         }
-
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .feature-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 12px 5px;
-            text-align: center;
-        }
-
-        .feature-box .icon {
-            font-size: 18px;
-            margin-bottom: 6px;
-        }
-
-        .feature-box h4 {
-            font-size: 11px;
-            color: #e5e7eb;
-            margin-bottom: 4px;
-        }
-
-        .feature-box p {
-            font-size: 9px;
-            color: var(--text-muted);
-        }
-
-        /* Reviews / Testimonial Box */
-        .testimonial-box {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 12px;
-            margin-bottom: 25px;
-        }
-
-        .stars {
-            color: #f59e0b;
-            font-size: 12px;
-            margin-bottom: 4px;
-        }
-
-        .testimonial-box h4 {
-            font-size: 12px;
-            margin-bottom: 2px;
-        }
-
-        .testimonial-box p {
-            font-size: 10px;
-            color: var(--text-muted);
-        }
-
-        /* Gallery Grid */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-bottom: 30px;
-        }
-
-        .gallery-grid img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
+        .card {
+            background: #161a1d;
+            padding: 20px;
             border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-
-        /* Guarantees Bar */
-        .guarantees {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .guarantee-item {
-            background: var(--card-bg);
-            padding: 10px 5px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            font-size: 10px;
-        }
-
-        /* Order Form Card */
-        .form-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 20px 15px;
-            text-align: right;
-        }
-
-        .form-group {
-            margin-bottom: 12px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 5px;
-        }
-
-        .form-group input, .form-group select {
+            max-width: 400px;
             width: 100%;
+            border: 1px solid #262b30;
+        }
+        .price { font-size: 20px; color: #10b981; font-weight: bold; margin: 10px 0; }
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
             background: #0b0d0f;
+            color: white;
             border: 1px solid #2d3339;
-            color: #fff;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
             padding: 12px;
-            border-radius: 8px;
-            font-size: 13px;
-            outline: none;
-        }
-
-        .price-summary {
-            margin: 15px 0;
-            padding-top: 10px;
-            border-top: 1px dashed var(--border-color);
-            font-size: 13px;
-        }
-
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 6px;
-            color: var(--text-muted);
-        }
-
-        .price-row.total {
-            color: #fff;
+            background: #10b981;
+            border: none;
+            color: white;
             font-weight: bold;
-            font-size: 15px;
-        }
-
-        /* Sticky Bottom Bar */
-        .sticky-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #0b0d0f;
-            border-top: 1px solid var(--border-color);
-            padding: 10px 15px;
-            z-index: 1000;
-        }
-
-        .sticky-btn {
-            background-color: var(--accent-green);
-            color: #fff;
-            text-decoration: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 14px;
-            gap: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div class="brand-tag">• SKMEI BRAND •</div>
-    <h1 class="main-title">أناقة رجالية تلفت الانتباه من أول نظرة</h1>
-    <p class="subtitle">ساعة SKMEI بتصميم كرونوغراف أنيق، هيكل من الاستانلس ستيل، مقاومة للماء ورائعة</p>
-
-    <!-- الرئيسية -->
-    <div class="hero-card">
-        <img src="https://m.media-amazon.com/images/I/71eWp68zLmL._AC_SL1500_.jpg" alt="Skmei Watch" class="hero-img">
-        <div class="price-main">DA 2,900</div>
-        <div class="price-badge">⚡ الساعة بـ <b>2,900 DA</b> فقط!</div>
-        <a href="#order-form" class="btn-green">إطلبها الآن</a>
-    </div>
-
-    <!-- المميزات -->
-    <div class="section-title">🔥 كل التفاصيل اللي تهمك في ساعة واحدة</div>
-    
-    <div class="features-grid">
-        <div class="feature-box">
-            <div class="icon">💧</div>
-            <h4>Résistante à l'eau</h4>
-            <p>مناسبة للاستعمال اليومي</p>
-        </div>
-        <div class="feature-box">
-            <div class="icon">💡</div>
-            <h4>Aiguilles lumineuses</h4>
-            <p>قراءة أسهل في الإضاءة ضعيفة</p>
-        </div>
-        <div class="feature-box">
-            <div class="icon">⚙️</div>
-            <h4>Acier Inoxydable</h4>
-            <p>سوار ممتاز ومقاوم للصدأ</p>
-        </div>
-    </div>
-
-    <div class="testimonial-box">
-        <div class="stars">★★★★★</div>
-        <h4>تصميم يبان في اليد</h4>
-        <p>تمنحك مظهر شخصي وأنيق أثناء العمل أو المناسبات بشكل عصري.</p>
-    </div>
-
-    <!-- معرض الصور -->
-    <div class="section-title">👀 شوف التفاصيل قبل ما تطلب</div>
-    <p class="subtitle" style="margin-top: -10px;">صور حقيقية توضح دقة التصميم والجودة عن قرب</p>
-
-    <div class="gallery-grid">
-        <img src="https://m.media-amazon.com/images/I/61ybe3S1iBL._AC_SL1500_.jpg" alt="صورة تفصيلية 1">
-        <img src="https://m.media-amazon.com/images/I/71qN0t2+m3L._AC_SL1500_.jpg" alt="صورة تفصيلية 2">
-        <img src="https://m.media-amazon.com/images/I/71L-fPzPULL._AC_SL1500_.jpg" alt="صورة تفصيلية 3">
-        <img src="https://m.media-amazon.com/images/I/61kC8YvV0NL._AC_SL1500_.jpg" alt="صورة تفصيلية 4">
-    </div>
-
-    <!-- الضمانات -->
-    <div class="guarantees">
-        <div class="guarantee-item">
-            📞<b>تأكيد الطلب</b><br>تواصل سريع لتأكيد معلوماتك
-        </div>
-        <div class="guarantee-item">
-            🚚<b>التوصيل 24-48 ساعة</b><br>حسب الشركة والتوصيل لولايتك
-        </div>
-        <div class="guarantee-item">
-            💰<b>الدفع عند الاستلام</b><br>لا تدفع شيئاً حتى تعاين
-        </div>
-    </div>
-
-    <!-- نموذج الطلب -->
-    <div class="form-card" id="order-form">
-        <h3 style="text-align: center; margin-bottom: 15px; font-size: 16px;">🛒 أكد طلبك</h3>
+    <!-- 2️⃣ كود الـ HTML (الهيكل والعناصر) -->
+    <div class="card">
+        <h2>ساعة Skmei الفاخرة</h2>
+        <p>سعر الساعة: <b>2,900 DA</b></p>
         
-        <form>
-            <div class="form-group">
-                <label>الاسم واللقب:</label>
-                <input type="text" placeholder="مثال: محمد بن عمر" required>
-            </div>
+        <label>اختر الولاية:</label>
+        <select id="wilaya" onchange="updateTotal()">
+            <option value="0">اختر الولاية...</option>
+            <option value="400">16 - الجزائر (توصيل: 400 DA)</option>
+            <option value="600">31 - وهران (توصيل: 600 DA)</option>
+            <option value="800">23 - عنابة (توصيل: 800 DA)</option>
+        </select>
 
-            <div class="form-group">
-                <label>رقم الهاتف:</label>
-                <input type="tel" placeholder="06XX XX XX XX" required>
-            </div>
+        <div class="price">
+            المجموع الكلي: <span id="totalPrice">2,900</span> DA
+        </div>
 
-            <div class="form-group">
-                <label>الولاية:</label>
-                <select required>
-                    <option value="">اختر الولاية...</option>
-                    <option value="16">16 - الجزائر</option>
-                    <option value="31">31 - وهران</option>
-                    <option value="25">25 - قسنطينة</option>
-                    <option value="23">23 - عنابة</option>
-                    <!-- يمكنك إضافة باقي الولايات بنفس الطريق -->
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>العنوان / البلدية:</label>
-                <input type="text" placeholder="البلدية + العنوان" required>
-            </div>
-
-            <div class="price-summary">
-                <div class="price-row">
-                    <span>الكمية:</span>
-                    <span>1</span>
-                </div>
-                <div class="price-row">
-                    <span>السعر:</span>
-                    <span>DA 2,900</span>
-                </div>
-                <div class="price-row total">
-                    <span>المجموع:</span>
-                    <span style="color: var(--accent-green);">DA 2,900</span>
-                </div>
-            </div>
-
-            <button type="submit" class="btn-green">تأكيد الطلب</button>
-            <p style="font-size: 10px; color: var(--text-muted); text-align: center; margin-top: 8px;">🔒 معلوماتك بأمان وسنقوم بالاتصال بك لتأكيد الشحن.</p>
-        </form>
+        <button onclick="submitOrder()">تأكيد الطلب</button>
     </div>
-</div>
 
-<!-- الشريط المثبت في الأسفل -->
-<div class="sticky-bar">
-    <a href="#order-form" class="sticky-btn">
-        <span>اطلب ساعتك الآن — DA 2,900</span>
-    </a>
-</div>
+    <!-- 3️⃣ كود الـ JavaScript (التفاعل والعمليات) -->
+    <script>
+        function updateTotal() {
+            const productPrice = 2900;
+            const deliveryCost = parseInt(document.getElementById('wilaya').value) || 0;
+            const total = productPrice + deliveryCost;
+            
+            // تحديث السعر المباشر في الصفحة
+            document.getElementById('totalPrice').innerText = total.toLocaleString();
+        }
+
+        function submitOrder() {
+            const wilayaSelect = document.getElementById('wilaya');
+            if (wilayaSelect.value == "0") {
+                alert("يرجى اختيار الولاية أولاً!");
+            } else {
+                alert("تم تسجيل طلبك بنجاح! المجموع: " + document.getElementById('totalPrice').innerText + " DA");
+            }
+        }
+    </script>
 
 </body>
 </html>
