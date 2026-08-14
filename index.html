@@ -1,228 +1,1564 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<!doctype html>
+<html lang="fr" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ساعة Skmei - طلب سريع</title>
-    
-    <!-- 1️⃣ التنسيق والتصميم (CSS) -->
-    <style>
-        :root {
-            --bg-color: #0b0d0f;
-            --card-bg: #161a1d;
-            --accent-green: #10b981;
-            --text-main: #ffffff;
-            --text-muted: #9ca3af;
-            --border-color: #262b30;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<title>SKMEI Homme — Montre Acier Inoxydable</title>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            padding: 20px 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+<meta name="description"
+content="Montre SKMEI Homme en acier inoxydable. Dateur, aiguilles lumineuses, style premium. Livraison 24 à 48h en Algérie.">
 
-        .container {
-            width: 100%;
-            max-width: 450px;
-        }
+<style>
 
-        .form-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
+:root{
+--bg:#080808;
+--card:#111;
+--gold:#d8b15a;
+--text:#fff;
+--muted:#bdbdbd;
+--green:#18b66a;
+}
 
-        h3 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #fff;
-            font-size: 18px;
-        }
+*{
+box-sizing:border-box
+}
 
-        .form-group {
-            margin-bottom: 15px;
-            text-align: right;
-        }
+body{
+margin:0;
+background:linear-gradient(180deg,#050505,#111);
+color:var(--text);
+font-family:Arial,Tahoma,sans-serif;
+line-height:1.55;
+}
 
-        .form-group label {
-            display: block;
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-            font-weight: 500;
-        }
+.container{
+max-width:1050px;
+margin:auto;
+padding:0 16px;
+}
 
-        .form-group input, .form-group select {
-            width: 100%;
-            background: #0b0d0f;
-            border: 1px solid #2d3339;
-            color: #fff;
-            padding: 12px;
-            border-radius: 8px;
-            font-size: 14px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
+.hero{
+padding:20px 0 34px;
+text-align:center;
+background:radial-gradient(circle at 50% 10%,#252525 0,#090909 55%);
+}
 
-        .form-group input:focus, .form-group select:focus {
-            border-color: var(--accent-green);
-        }
+.badge{
+display:inline-block;
+border:1px solid #555;
+border-radius:999px;
+padding:7px 13px;
+color:#eee;
+font-size:13px;
+margin:8px;
+}
 
-        .price-summary {
-            margin: 20px 0;
-            padding-top: 15px;
-            border-top: 1px dashed var(--border-color);
-            font-size: 14px;
-        }
+h1{
+font-size:clamp(30px,6vw,58px);
+margin:10px 0 8px;
+letter-spacing:-1px;
+}
 
-        .price-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
-            color: var(--text-muted);
-        }
+.hero p{
+color:#ddd;
+max-width:680px;
+margin:0 auto 18px;
+}
 
-        .price-row.total {
-            color: #fff;
-            font-weight: bold;
-            font-size: 16px;
-            margin-top: 10px;
-        }
+.hero-img{
+width:100%;
+max-width:600px;
+border-radius:24px;
+display:block;
+margin:18px auto;
+box-shadow:0 18px 55px #000;
+}
 
-        .btn-green {
-            background-color: var(--accent-green);
-            color: #ffffff;
-            border: none;
-            width: 100%;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.2s;
-        }
+.price{
+font-size:36px;
+font-weight:900;
+color:var(--gold);
+margin:10px 0;
+}
 
-        .btn-green:hover {
-            opacity: 0.9;
-        }
-    </style>
+.old{
+color:#777;
+text-decoration:line-through;
+font-size:16px;
+}
+
+.cta{
+display:inline-block;
+background:var(--green);
+color:white;
+text-decoration:none;
+font-weight:900;
+padding:15px 26px;
+border-radius:13px;
+font-size:19px;
+box-shadow:0 8px 25px #000;
+margin:10px 0;
+}
+
+.trust{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:8px;
+margin-top:8px;
+}
+
+.trust span{
+background:#161616;
+border:1px solid #2b2b2b;
+border-radius:12px;
+padding:8px 11px;
+color:#eee;
+font-size:13px;
+}
+
+.section{
+padding:48px 0;
+}
+
+.title{
+text-align:center;
+font-size:30px;
+margin:0 0 22px;
+}
+
+.sub{
+text-align:center;
+color:var(--muted);
+margin:-12px auto 24px;
+max-width:700px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+.gallery img{
+width:100%;
+border-radius:18px;
+display:block;
+background:#1a1a1a;
+box-shadow:0 8px 30px #000;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:12px;
+}
+
+.feature{
+background:linear-gradient(145deg,#151515,#0d0d0d);
+border:1px solid #2b2b2b;
+border-radius:16px;
+padding:18px;
+text-align:center;
+}
+
+.feature b{
+display:block;
+margin-bottom:6px;
+color:var(--gold);
+}
+
+.order{
+background:linear-gradient(145deg,#181818,#0b0b0b);
+border:1px solid #333;
+border-radius:22px;
+padding:22px;
+max-width:720px;
+margin:auto;
+box-shadow:0 15px 50px #000;
+}
+
+label{
+display:block;
+margin:12px 0 6px;
+font-weight:700;
+}
+
+input,
+select{
+width:100%;
+padding:14px;
+border-radius:11px;
+border:1px solid #444;
+background:#080808;
+color:#fff;
+font-size:16px;
+outline:none;
+}
+
+input:focus,
+select:focus{
+border-color:var(--gold);
+}
+
+.total{
+margin:18px 0;
+background:#090909;
+border:1px solid #333;
+border-radius:14px;
+padding:15px;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+gap:15px;
+margin:7px 0;
+color:#ddd;
+}
+
+.row strong{
+color:#fff;
+}
+
+.total-final{
+font-size:22px;
+font-weight:900;
+color:var(--gold);
+border-top:1px solid #333;
+padding-top:12px;
+margin-top:10px;
+}
+
+.submit{
+width:100%;
+border:0;
+background:var(--green);
+color:#fff;
+font-size:19px;
+font-weight:900;
+padding:16px;
+border-radius:12px;
+cursor:pointer;
+}
+
+.note{
+font-size:13px;
+color:#aaa;
+text-align:center;
+margin-top:10px;
+}
+
+.success{
+display:none;
+text-align:center;
+padding:20px;
+background:#092217;
+border:1px solid #185d3b;
+border-radius:14px;
+margin-top:15px;
+}
+
+footer{
+padding:30px 0;
+text-align:center;
+color:#888;
+font-size:13px;
+}
+
+@media(max-width:720px){
+
+.features{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:480px){
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+
+/* Conversion upgrades */
+
+.sticky-cta{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+z-index:9999;
+background:rgba(7,7,7,.96);
+backdrop-filter:blur(8px);
+padding:10px 14px;
+border-top:1px solid #333;
+text-align:center;
+}
+
+.sticky-cta a{
+display:block;
+max-width:680px;
+margin:auto;
+background:#18b66a;
+color:#fff;
+text-decoration:none;
+font-weight:900;
+padding:13px;
+border-radius:12px;
+font-size:18px;
+}
+
+.offer{
+max-width:760px;
+margin:25px auto 0;
+background:linear-gradient(135deg,#191919,#0b0b0b);
+border:1px solid #4a3a19;
+border-radius:18px;
+padding:18px;
+text-align:center;
+}
+
+.offer strong{
+color:#d8b15a;
+font-size:22px;
+}
+
+.offer .small{
+display:block;
+color:#aaa;
+font-size:13px;
+margin-top:5px;
+}
+
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+max-width:900px;
+margin:25px auto;
+}
+
+.trust-card{
+background:#111;
+border:1px solid #292929;
+border-radius:16px;
+padding:17px;
+text-align:center;
+}
+
+.trust-card .ico{
+font-size:27px;
+display:block;
+margin-bottom:7px;
+}
+
+.review{
+max-width:760px;
+margin:20px auto;
+background:#111;
+border:1px solid #2b2b2b;
+border-radius:16px;
+padding:18px;
+}
+
+.stars{
+color:#d8b15a;
+letter-spacing:2px;
+}
+
+.micro{
+font-size:12px;
+color:#8e8e8e;
+text-align:center;
+margin-top:12px;
+}
+
+@media(max-width:600px){
+
+.trust-grid{
+grid-template-columns:1fr;
+}
+
+.sticky-cta{
+padding-bottom:calc(10px + env(safe-area-inset-bottom));
+}
+
+}
+
+body{
+padding-bottom:70px;
+}
+
+</style>
 </head>
+
+
 <body>
 
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
 <div class="container">
-    <!-- 2️⃣ الهيكل (HTML) -->
-    <div class="form-card">
-        <h3>🛒 أكد طلبك الآن</h3>
-        
-        <form id="checkoutForm" onsubmit="event.preventDefault(); handleOrder();">
-            <div class="form-group">
-                <label for="fullName">الاسم واللقب:</label>
-                <input type="text" id="fullName" placeholder="مثال: محمد بن عمر" required>
-            </div>
 
-            <div class="form-group">
-                <label for="phone">رقم الهاتف:</label>
-                <input type="tel" id="phone" placeholder="06XX XX XX XX" pattern="[0][5-7][0-9]{8}" title="يرجى إدخال رقم هاتف جزائري صحيح" required>
-            </div>
+<span class="badge">
+⌚ SKMEI HOMME
+</span>
 
-            <div class="form-group">
-                <label for="wilaya">الولاية:</label>
-                <select id="wilaya" onchange="calculateTotal()" required>
-                    <option value="" disabled selected>-- اضغط هنا لاختيار ولايتك --</option>
-                    <option value="400">01 - أدرار (توصيل: 400 DA)</option>
-                    <option value="400">02 - الشلف (توصيل: 400 DA)</option>
-                    <option value="500">03 - الأغواط (توصيل: 500 DA)</option>
-                    <option value="400">04 - أم البواقي (توصيل: 400 DA)</option>
-                    <option value="400">05 - باتنة (توصيل: 400 DA)</option>
-                    <option value="400">06 - بجاية (توصيل: 400 DA)</option>
-                    <option value="500">07 - بسكرة (توصيل: 500 DA)</option>
-                    <option value="600">08 - بشار (توصيل: 600 DA)</option>
-                    <option value="350">09 - البليدة (توصيل: 350 DA)</option>
-                    <option value="400">10 - البويرة (توصيل: 400 DA)</option>
-                    <option value="800">11 - تمنراست (توصيل: 800 DA)</option>
-                    <option value="400">12 - تبسة (توصيل: 400 DA)</option>
-                    <option value="400">13 - تلمسان (توصيل: 400 DA)</option>
-                    <option value="400">14 - تيارت (توصيل: 400 DA)</option>
-                    <option value="400">15 - تيزي وزو (توصيل: 400 DA)</option>
-                    <option value="300">16 - الجزائر (توصيل: 300 DA)</option>
-                    <option value="400">17 - الجلفة (توصيل: 400 DA)</option>
-                    <option value="400">18 - جيجل (توصيل: 400 DA)</option>
-                    <option value="400">19 - سطيف (توصيل: 400 DA)</option>
-                    <option value="400">20 - سعيدة (توصيل: 400 DA)</option>
-                    <option value="400">21 - سكيكدة (توصيل: 400 DA)</option>
-                    <option value="400">22 - سيدي بلعباس (توصيل: 400 DA)</option>
-                    <option value="350">23 - عنابة (توصيل: 350 DA)</option>
-                    <option value="400">24 - قالمة (توصيل: 400 DA)</option>
-                    <option value="350">25 - قسنطينة (توصيل: 350 DA)</option>
-                    <option value="400">26 - المديّة (توصيل: 400 DA)</option>
-                    <option value="400">27 - مستغانم (توصيل: 400 DA)</option>
-                    <option value="400">28 - المسيلة (توصيل: 400 DA)</option>
-                    <option value="400">29 - معسكر (توصيل: 400 DA)</option>
-                    <option value="500">30 - ورقلة (توصيل: 500 DA)</option>
-                    <option value="350">31 - وهران (توصيل: 350 DA)</option>
-                </select>
-            </div>
+<h1>
+أناقة رجالية تلفت الانتباه من أول نظرة
+</h1>
 
-            <div class="form-group">
-                <label for="commune">البلدية / العنوان:</label>
-                <input type="text" id="commune" placeholder="أدخل اسم البلدية أو العنوان التفصيلي" required>
-            </div>
+<p>
+ساعة SKMEI بتصميم كرونوغراف أنيق،
+سوار من الستانلس ستيل وتفاصيل مضيئة —
+مناسبة للعمل، الخروج واللوك الرياضي.
+</p>
 
-            <div class="price-summary">
-                <div class="price-row">
-                    <span>سعر الساعة:</span>
-                    <span>2,900 DA</span>
-                </div>
-                <div class="price-row">
-                    <span>تأكيد التوصيل:</span>
-                    <span id="deliveryCost">-- DA</span>
-                </div>
-                <div class="price-row total">
-                    <span>المجموع الكلي:</span>
-                    <span id="finalPrice" style="color: var(--accent-green);">2,900 DA</span>
-                </div>
-            </div>
+<img
+class="hero-img"
+src="watch.jpg"
+alt="Montre SKMEI Homme"
+>
 
-            <button type="submit" class="btn-green">تأكيد الطلب الآن</button>
-        </form>
-    </div>
+<div class="price">
+2,900 DA
 </div>
 
-<!-- 3️⃣ التفاعل (JavaScript) -->
+<div class="trust">
+
+<span>
+🚚 توصيل 24–48 ساعة
+</span>
+
+<span>
+💧 مقاومة للماء
+</span>
+
+<span>
+✨ عقارب مضيئة
+</span>
+
+<span>
+📅 Dateur
+</span>
+
+</div>
+
+<a
+class="cta"
+href="#order"
+>
+🛒 اطلبها الآن
+</a>
+
+<div class="offer">
+
+<strong>
+⌚ الساعة بـ 2,900 DA
+</strong>
+
+<span class="small">
+🚚 التوصيل يُحسب تلقائياً حسب ولايتك
+• ⏱️ 24–48 ساعة
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TRUST ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="title">
+كل التفاصيل اللي تهمك في ساعة واحدة 👌
+</h2>
+
+<div class="trust-grid">
+
+<div class="trust-card">
+
+<span class="ico">
+🔩
+</span>
+
+<b>
+Acier inoxydable
+</b>
+
+<br>
+
+<span style="color:#aaa">
+سوار معدني بتشطيب أنيق
+</span>
+
+</div>
+
+
+<div class="trust-card">
+
+<span class="ico">
+💡
+</span>
+
+<b>
+Aiguilles lumineuses
+</b>
+
+<br>
+
+<span style="color:#aaa">
+قراءة أوضح في الإضاءة الضعيفة
+</span>
+
+</div>
+
+
+<div class="trust-card">
+
+<span class="ico">
+💧
+</span>
+
+<b>
+Résistante à l'eau
+</b>
+
+<br>
+
+<span style="color:#aaa">
+مناسبة للاستعمال اليومي
+</span>
+
+</div>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<b>
+تصميم يبان في اليد
+</b>
+
+<p style="color:#bbb;margin:7px 0 0">
+
+استعمل الصور الحقيقية والتفاصيل القريبة
+قبل الطلب باش تشوف الموديل بوضوح.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="title">
+شوف التفاصيل قبل ما تطلب 👀
+</h2>
+
+<p class="sub">
+4 زوايا مختلفة باش تشوف التصميم،
+اللمعة والتفاصيل عن قرب.
+</p>
+
+<div class="gallery">
+
+<img
+src="watch.jpg"
+alt="SKMEI sur coussin"
+>
+
+<img
+src="watch.jpg"
+alt="SKMEI résistance à l'eau"
+>
+
+<img
+src="watch.jpg"
+alt="SKMEI au poignet"
+>
+
+<img
+src="watch.jpg"
+alt="Photo réelle de la montre SKMEI"
+>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="section">
+
+<div class="container">
+
+<h2 class="title">
+علاش هذي الساعة؟ 🔥
+</h2>
+
+<div class="features">
+
+
+<div class="feature">
+
+<b>
+🥇 تصميم رجالي
+</b>
+
+لوك أنيق وفخم بدون مبالغة.
+
+</div>
+
+
+<div class="feature">
+
+<b>
+🔩 Acier inoxydable
+</b>
+
+سوار معدني يعطي إحساس Premium.
+
+</div>
+
+
+<div class="feature">
+
+<b>
+💡 Aiguilles lumineuses
+</b>
+
+العقارب مضيئة لسهولة القراءة.
+
+</div>
+
+
+<div class="feature">
+
+<b>
+💧 مقاومة للماء
+</b>
+
+مناسبة للاستعمال اليومي،
+وتجنب الغمر أو السباحة بها.
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ORDER ================= -->
+
+<section
+class="section"
+id="order"
+>
+
+<div class="container">
+
+<h2 class="title">
+🛒 أكد طلبك
+</h2>
+
+<p class="sub">
+
+اكتب معلوماتك هنا،
+وما تحتاجش تفتح واتساب.
+السعر النهائي يتحسب تلقائياً حسب الولاية.
+
+</p>
+
+
+<div
+class="trust-grid"
+style="margin-top:0"
+>
+
+
+<div class="trust-card">
+
+<span class="ico">
+📞
+</span>
+
+<b>
+تأكيد الطلب
+</b>
+
+<br>
+
+<span style="color:#aaa">
+نتواصل معك لتأكيد المعلومات
+</span>
+
+</div>
+
+
+<div class="trust-card">
+
+<span class="ico">
+🚚
+</span>
+
+<b>
+توصيل 24–48 ساعة
+</b>
+
+<br>
+
+<span style="color:#aaa">
+حسب شركة التوصيل والولاية
+</span>
+
+</div>
+
+
+<div class="trust-card">
+
+<span class="ico">
+💰
+</span>
+
+<b>
+الدفع عند الاستلام
+</b>
+
+<br>
+
+<span style="color:#aaa">
+لا تدفع أونلاين
+</span>
+
+</div>
+
+
+</div>
+
+
+<div class="order">
+
+
+<form id="orderForm">
+
+
+<!-- Honeypot -->
+
+<input
+type="text"
+id="website"
+name="website"
+autocomplete="off"
+tabindex="-1"
+style="position:absolute;left:-9999px;opacity:0"
+>
+
+
+<label>
+الاسم واللقب
+</label>
+
+<input
+id="name"
+required
+placeholder="مثال: محمد بن علي"
+>
+
+
+<label>
+رقم الهاتف
+</label>
+
+<input
+id="phone"
+required
+inputmode="tel"
+placeholder="05 / 06 / 07 XX XX XX XX"
+>
+
+
+<label>
+الولاية
+</label>
+
+<select
+id="wilaya"
+required
+>
+
+<option value="">
+اختر الولاية
+</option>
+
+</select>
+
+
+<label>
+العنوان / البلدية
+</label>
+
+<input
+id="address"
+required
+placeholder="البلدية + العنوان"
+>
+
+
+<label>
+طريقة التوصيل
+</label>
+
+<select id="delivery">
+
+<option value="home">
+🏠 التوصيل للمنزل
+</option>
+
+<option value="desk">
+🏢 Stop Desk / المكتب
+</option>
+
+</select>
+
+
+<!-- TOTAL -->
+
+<div class="total">
+
+<div class="row">
+
+<span>
+⌚ الساعة
+</span>
+
+<strong>
+2,900 DA
+</strong>
+
+</div>
+
+
+<div class="row">
+
+<span>
+🚚 التوصيل
+</span>
+
+<strong id="shipping">
+—
+</strong>
+
+</div>
+
+
+<div class="row total-final">
+
+<span>
+💰 المجموع
+</span>
+
+<strong id="grand">
+2,900 DA
+</strong>
+
+</div>
+
+</div>
+
+
+<button
+class="submit"
+type="submit"
+>
+
+تأكيد طلب
+
+</button>
+
+
+<div class="note">
+
+🚚 التوصيل عادةً من 24 إلى 48 ساعة.
+سيتم الاتصال بك لتأكيد التفاصيل.
+
+</div>
+
+
+<div
+class="success"
+id="success"
+>
+
+✅ تم استلام طلبك.
+شكراً لثقتك في SKMEI.
+
+</div>
+
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+SKMEI Homme • Montre acier inoxydable • 2,900 DA
+
+</footer>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script>
-    function calculateTotal() {
-        const productPrice = 2900;
-        const wilayaSelect = document.getElementById('wilaya');
-        const deliveryCost = parseInt(wilayaSelect.value) || 0;
-        const total = productPrice + deliveryCost;
 
-        document.getElementById('deliveryCost').innerText = deliveryCost + " DA";
-        document.getElementById('finalPrice').innerText = total.toLocaleString() + " DA";
-    }
+const PRICE = 2900;
 
-    function handleOrder() {
-        const name = document.getElementById('fullName').value;
-        const wilayaText = document.getElementById('wilaya').options[document.getElementById('wilaya').selectedIndex].text;
-        const commune = document.getElementById('commune').value;
-        const total = document.getElementById('finalPrice').innerText;
 
-        alert(`شكراً لك يا ${name}! تم استلام طلبك بنجاح.\nالولاية: ${wilayaText}\nالبلدية: ${commune}\nالمجموع: ${total}`);
-    }
+const WILAYAS = [
+
+{
+name:"Adrar",
+home:1400,
+desk:970
+},
+
+{
+name:"Chlef",
+home:800,
+desk:520
+},
+
+{
+name:"Laghouat",
+home:950,
+desk:670
+},
+
+{
+name:"Oum El Bouaghi",
+home:750,
+desk:520
+},
+
+{
+name:"Batna",
+home:750,
+desk:520
+},
+
+{
+name:"Béjaïa",
+home:750,
+desk:520
+},
+
+{
+name:"Biskra",
+home:950,
+desk:620
+},
+
+{
+name:"Béchar",
+home:1100,
+desk:720
+},
+
+{
+name:"Blida",
+home:750,
+desk:520
+},
+
+{
+name:"Bouira",
+home:750,
+desk:520
+},
+
+{
+name:"Tamanrasset",
+home:1600,
+desk:1120
+},
+
+{
+name:"Tébessa",
+home:800,
+desk:520
+},
+
+{
+name:"Tlemcen",
+home:900,
+desk:570
+},
+
+{
+name:"Tiaret",
+home:800,
+desk:520
+},
+
+{
+name:"Tizi Ouzou",
+home:750,
+desk:520
+},
+
+{
+name:"Alger",
+home:650,
+desk:470
+},
+
+{
+name:"Djelfa",
+home:950,
+desk:570
+},
+
+{
+name:"Jijel",
+home:750,
+desk:520
+},
+
+{
+name:"Sétif",
+home:750,
+desk:520
+},
+
+{
+name:"Saïda",
+home:800,
+desk:570
+},
+
+{
+name:"Skikda",
+home:700,
+desk:520
+},
+
+{
+name:"Sidi Bel Abbès",
+home:800,
+desk:520
+},
+
+{
+name:"Annaba",
+home:500,
+desk:370
+},
+
+{
+name:"Guelma",
+home:700,
+desk:520
+},
+
+{
+name:"Constantine",
+home:700,
+desk:520
+},
+
+{
+name:"Médéa",
+home:800,
+desk:520
+},
+
+{
+name:"Mostaganem",
+home:800,
+desk:520
+},
+
+{
+name:"M'Sila",
+home:850,
+desk:570
+},
+
+{
+name:"Mascara",
+home:800,
+desk:520
+},
+
+{
+name:"Ouargla",
+home:1000,
+desk:670
+},
+
+{
+name:"Oran",
+home:800,
+desk:520
+},
+
+{
+name:"El Bayadh",
+home:1050,
+desk:670
+},
+
+{
+name:"Illizi",
+home:0,
+desk:0
+},
+
+{
+name:"Bordj Bou Arreridj",
+home:750,
+desk:520
+},
+
+{
+name:"Boumerdès",
+home:750,
+desk:520
+},
+
+{
+name:"El Tarf",
+home:650,
+desk:520
+},
+
+{
+name:"Tindouf",
+home:0,
+desk:0
+},
+
+{
+name:"Tissemsilt",
+home:800,
+desk:520
+},
+
+{
+name:"El Oued",
+home:1000,
+desk:670
+},
+
+{
+name:"Khenchela",
+home:750,
+desk:520
+},
+
+{
+name:"Souk Ahras",
+home:750,
+desk:520
+},
+
+{
+name:"Tipaza",
+home:800,
+desk:520
+},
+
+{
+name:"Mila",
+home:750,
+desk:520
+},
+
+{
+name:"Aïn Defla",
+home:800,
+desk:520
+},
+
+{
+name:"Naâma",
+home:1100,
+desk:670
+},
+
+{
+name:"Aïn Témouchent",
+home:800,
+desk:520
+},
+
+{
+name:"Ghardaïa",
+home:1000,
+desk:670
+},
+
+{
+name:"Relizane",
+home:800,
+desk:520
+},
+
+{
+name:"Timmimoun",
+home:1400,
+desk:0
+},
+
+{
+name:"Bordj Badji Mokhtar",
+home:0,
+desk:0
+},
+
+{
+name:"Ouled Djellal",
+home:950,
+desk:620
+},
+
+{
+name:"Béni Abbès",
+home:1000,
+desk:970
+},
+
+{
+name:"In Salah",
+home:1600,
+desk:0
+},
+
+{
+name:"In Guezzam",
+home:1600,
+desk:0
+},
+
+{
+name:"Touggourt",
+home:1000,
+desk:670
+},
+
+{
+name:"Djanet",
+home:0,
+desk:0
+},
+
+{
+name:"M'Ghair",
+home:950,
+desk:0
+},
+
+{
+name:"El Menia",
+home:1000,
+desk:0
+}
+
+];
+
+
+const select =
+document.getElementById("wilaya");
+
+const delivery =
+document.getElementById("delivery");
+
+const shipping =
+document.getElementById("shipping");
+
+const grand =
+document.getElementById("grand");
+
+
+/* Populate Wilayas */
+
+WILAYAS.forEach(w => {
+
+const o =
+document.createElement("option");
+
+o.value =
+w.name;
+
+o.textContent =
+w.name;
+
+o.dataset.home =
+w.home;
+
+o.dataset.desk =
+w.desk;
+
+select.appendChild(o);
+
+});
+
+
+/* Format money */
+
+function money(n){
+
+return Number(n)
+.toLocaleString("fr-DZ")
++
+" DA";
+
+}
+
+
+/* Update total */
+
+function updateTotal(){
+
+const o =
+select.options[
+select.selectedIndex
+];
+
+const s =
+delivery.value === "desk"
+?
+Number(o?.dataset.desk || 0)
+:
+Number(o?.dataset.home || 0);
+
+
+shipping.textContent =
+s
+?
+money(s)
+:
+"—";
+
+
+grand.textContent =
+money(PRICE + s);
+
+}
+
+
+select.addEventListener(
+"change",
+updateTotal
+);
+
+
+delivery.addEventListener(
+"change",
+updateTotal
+);
+
+
+/* Order form */
+
+document
+.getElementById("orderForm")
+.addEventListener(
+"submit",
+async e => {
+
+e.preventDefault();
+
+
+const o =
+select.options[
+select.selectedIndex
+];
+
+
+const deliveryPrice =
+delivery.value === "desk"
+?
+Number(o.dataset.desk || 0)
+:
+Number(o.dataset.home || 0);
+
+
+const payload = {
+
+name:
+document
+.getElementById("name")
+.value
+.trim(),
+
+phone:
+document
+.getElementById("phone")
+.value
+.trim(),
+
+wilaya:
+select.value,
+
+address:
+document
+.getElementById("address")
+.value
+.trim(),
+
+delivery:
+delivery.value === "desk"
+?
+"Stop Desk / bureau"
+:
+"Domicile",
+
+deliveryPrice:
+deliveryPrice,
+
+total:
+PRICE + deliveryPrice
+
+};
+
+
+/*
+Telegram Worker endpoint
+*/
+
+const ENDPOINT =
+"https://skmei-orders.zorotms.workers.dev";
+
+
+try{
+
+const r =
+await fetch(
+ENDPOINT,
+{
+
+method:"POST",
+
+headers:{
+"Content-Type":
+"application/json"
+},
+
+body:
+JSON.stringify(payload)
+
+}
+);
+
+
+if(!r.ok){
+
+throw new Error(
+"send failed"
+);
+
+}
+
+
+document
+.getElementById("success")
+.style
+.display =
+"block";
+
+
+e.target.reset();
+
+
+updateTotal();
+
+
+window.scrollTo({
+
+top:
+document
+.getElementById("success")
+.offsetTop - 80,
+
+behavior:
+"smooth"
+
+});
+
+
+}
+
+catch(err){
+
+alert(
+"الطلب جاهز، لكن ربط الإرسال النهائي مازال ما تكملش. نكملوه في الخطوة القادمة."
+);
+
+}
+
+});
+
+
+updateTotal();
+
 </script>
+
+
+<!-- ================= STICKY CTA ================= -->
+
+<div class="sticky-cta">
+
+<a href="#order">
+
+🛒 اطلب ساعتك الآن — 2,900 DA
+
+</a>
+
+</div>
+
 
 </body>
 </html>
