@@ -1,87 +1,208 @@
-<!-- نموذج الطلب المتكامل -->
-<div class="form-card" id="order-form">
-    <h3 style="text-align: center; margin-bottom: 15px; color: #fff;">🛒 أكد طلبك الآن</h3>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ساعة Skmei - طلب سريع</title>
     
-    <form id="checkoutForm" onsubmit="event.preventDefault(); handleOrder();">
-        <!-- الاسم واللقب -->
-        <div class="form-group">
-            <label for="fullName">الاسم واللقب:</label>
-            <input type="text" id="fullName" placeholder="مثال: محمد بن عمر" required>
-        </div>
+    <!-- 1️⃣ التنسيق والتصميم (CSS) -->
+    <style>
+        :root {
+            --bg-color: #0b0d0f;
+            --card-bg: #161a1d;
+            --accent-green: #10b981;
+            --text-main: #ffffff;
+            --text-muted: #9ca3af;
+            --border-color: #262b30;
+        }
 
-        <!-- رقم الهاتف -->
-        <div class="form-group">
-            <label for="phone">رقم الهاتف:</label>
-            <input type="tel" id="phone" placeholder="06XX XX XX XX" pattern="[0][5-7][0-9]{8}" title="يرجى إدخال رقم هاتف جزائري صحيح مكون من 10 أرقام" required>
-        </div>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        <!-- خانة الولاية (القائمة منسدلة ومخفية تظهر فقط عند الضغط) -->
-        <div class="form-group">
-            <label for="wilaya">الولاية:</label>
-            <select id="wilaya" onchange="calculateTotal()" required>
-                <option value="" disabled selected>-- اضغط هنا لاختيار ولايتك --</option>
-                <option value="400">01 - أدرار (توصيل: 400 DA)</option>
-                <option value="400">02 - الشلف (توصيل: 400 DA)</option>
-                <option value="500">03 - الأغواط (توصيل: 500 DA)</option>
-                <option value="400">04 - أم البواقي (توصيل: 400 DA)</option>
-                <option value="400">05 - باتنة (توصيل: 400 DA)</option>
-                <option value="400">06 - بجاية (توصيل: 400 DA)</option>
-                <option value="500">07 - بسكرة (توصيل: 500 DA)</option>
-                <option value="600">08 - بشار (توصيل: 600 DA)</option>
-                <option value="350">09 - البليدة (توصيل: 350 DA)</option>
-                <option value="400">10 - البويرة (توصيل: 400 DA)</option>
-                <option value="800">11 - تمنراست (توصيل: 800 DA)</option>
-                <option value="400">12 - تبسة (توصيل: 400 DA)</option>
-                <option value="400">13 - تلمسان (توصيل: 400 DA)</option>
-                <option value="400">14 - تيارت (توصيل: 400 DA)</option>
-                <option value="400">15 - تيزي وزو (توصيل: 400 DA)</option>
-                <option value="300">16 - الجزائر (توصيل: 300 DA)</option>
-                <option value="400">17 - الجلفة (توصيل: 400 DA)</option>
-                <option value="400">18 - جيجل (توصيل: 400 DA)</option>
-                <option value="400">19 - سطيف (توصيل: 400 DA)</option>
-                <option value="400">20 - سعيدة (توصيل: 400 DA)</option>
-                <option value="400">21 - سكيكدة (توصيل: 400 DA)</option>
-                <option value="400">22 - سيدي بلعباس (توصيل: 400 DA)</option>
-                <option value="350">23 - عنابة (توصيل: 350 DA)</option>
-                <option value="400">24 - قالمة (توصيل: 400 DA)</option>
-                <option value="350">25 - قسنطينة (توصيل: 350 DA)</option>
-                <option value="400">26 - المديّة (توصيل: 400 DA)</option>
-                <option value="400">27 - مستغانم (توصيل: 400 DA)</option>
-                <option value="400">28 - المسيلة (توصيل: 400 DA)</option>
-                <option value="400">29 - معسكر (توصيل: 400 DA)</option>
-                <option value="500">30 - ورقلة (توصيل: 500 DA)</option>
-                <option value="350">31 - وهران (توصيل: 350 DA)</option>
-                <!-- يمكنك إكمال باقي الـ 58 ولاية بأسعار التوصيل الخاصة بك -->
-            </select>
-        </div>
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            padding: 20px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-        <!-- خانة البلدية / العنوان -->
-        <div class="form-group">
-            <label for="commune">البلدية / العنوان:**</label>
-            <input type="text" id="commune" placeholder="أدخل اسم البلدية أو العنوان التفصيلي" required>
-        </div>
+        .container {
+            width: 100%;
+            max-width: 450px;
+        }
 
-        <!-- ملخص السعر والدفع -->
-        <div class="price-summary">
-            <div class="price-row">
-                <span>سعر الساعة:</span>
-                <span>DA 2,900</span>
+        .form-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: right;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            background: #0b0d0f;
+            border: 1px solid #2d3339;
+            color: #fff;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: var(--accent-green);
+        }
+
+        .price-summary {
+            margin: 20px 0;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+            font-size: 14px;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .price-row.total {
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .btn-green {
+            background-color: var(--accent-green);
+            color: #ffffff;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-green:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 2️⃣ الهيكل (HTML) -->
+    <div class="form-card">
+        <h3>🛒 أكد طلبك الآن</h3>
+        
+        <form id="checkoutForm" onsubmit="event.preventDefault(); handleOrder();">
+            <div class="form-group">
+                <label for="fullName">الاسم واللقب:</label>
+                <input type="text" id="fullName" placeholder="مثال: محمد بن عمر" required>
             </div>
-            <div class="price-row">
-                <span>تأكيد التوصيل:</span>
-                <span id="deliveryCost">-- DA</span>
-            </div>
-            <div class="price-row total" style="font-size: 16px; font-weight: bold; margin-top: 8px;">
-                <span>المجموع الكلي:</span>
-                <span id="finalPrice" style="color: #10b981;">DA 2,900</span>
-            </div>
-        </div>
 
-        <button type="submit" class="btn-green">تأكيد الطلب الآن</button>
-    </form>
+            <div class="form-group">
+                <label for="phone">رقم الهاتف:</label>
+                <input type="tel" id="phone" placeholder="06XX XX XX XX" pattern="[0][5-7][0-9]{8}" title="يرجى إدخال رقم هاتف جزائري صحيح" required>
+            </div>
+
+            <div class="form-group">
+                <label for="wilaya">الولاية:</label>
+                <select id="wilaya" onchange="calculateTotal()" required>
+                    <option value="" disabled selected>-- اضغط هنا لاختيار ولايتك --</option>
+                    <option value="400">01 - أدرار (توصيل: 400 DA)</option>
+                    <option value="400">02 - الشلف (توصيل: 400 DA)</option>
+                    <option value="500">03 - الأغواط (توصيل: 500 DA)</option>
+                    <option value="400">04 - أم البواقي (توصيل: 400 DA)</option>
+                    <option value="400">05 - باتنة (توصيل: 400 DA)</option>
+                    <option value="400">06 - بجاية (توصيل: 400 DA)</option>
+                    <option value="500">07 - بسكرة (توصيل: 500 DA)</option>
+                    <option value="600">08 - بشار (توصيل: 600 DA)</option>
+                    <option value="350">09 - البليدة (توصيل: 350 DA)</option>
+                    <option value="400">10 - البويرة (توصيل: 400 DA)</option>
+                    <option value="800">11 - تمنراست (توصيل: 800 DA)</option>
+                    <option value="400">12 - تبسة (توصيل: 400 DA)</option>
+                    <option value="400">13 - تلمسان (توصيل: 400 DA)</option>
+                    <option value="400">14 - تيارت (توصيل: 400 DA)</option>
+                    <option value="400">15 - تيزي وزو (توصيل: 400 DA)</option>
+                    <option value="300">16 - الجزائر (توصيل: 300 DA)</option>
+                    <option value="400">17 - الجلفة (توصيل: 400 DA)</option>
+                    <option value="400">18 - جيجل (توصيل: 400 DA)</option>
+                    <option value="400">19 - سطيف (توصيل: 400 DA)</option>
+                    <option value="400">20 - سعيدة (توصيل: 400 DA)</option>
+                    <option value="400">21 - سكيكدة (توصيل: 400 DA)</option>
+                    <option value="400">22 - سيدي بلعباس (توصيل: 400 DA)</option>
+                    <option value="350">23 - عنابة (توصيل: 350 DA)</option>
+                    <option value="400">24 - قالمة (توصيل: 400 DA)</option>
+                    <option value="350">25 - قسنطينة (توصيل: 350 DA)</option>
+                    <option value="400">26 - المديّة (توصيل: 400 DA)</option>
+                    <option value="400">27 - مستغانم (توصيل: 400 DA)</option>
+                    <option value="400">28 - المسيلة (توصيل: 400 DA)</option>
+                    <option value="400">29 - معسكر (توصيل: 400 DA)</option>
+                    <option value="500">30 - ورقلة (توصيل: 500 DA)</option>
+                    <option value="350">31 - وهران (توصيل: 350 DA)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="commune">البلدية / العنوان:</label>
+                <input type="text" id="commune" placeholder="أدخل اسم البلدية أو العنوان التفصيلي" required>
+            </div>
+
+            <div class="price-summary">
+                <div class="price-row">
+                    <span>سعر الساعة:</span>
+                    <span>2,900 DA</span>
+                </div>
+                <div class="price-row">
+                    <span>تأكيد التوصيل:</span>
+                    <span id="deliveryCost">-- DA</span>
+                </div>
+                <div class="price-row total">
+                    <span>المجموع الكلي:</span>
+                    <span id="finalPrice" style="color: var(--accent-green);">2,900 DA</span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-green">تأكيد الطلب الآن</button>
+        </form>
+    </div>
 </div>
 
-<!-- كود JavaScript لتشغيل الحسابات والميزات -->
+<!-- 3️⃣ التفاعل (JavaScript) -->
 <script>
     function calculateTotal() {
         const productPrice = 2900;
@@ -89,14 +210,12 @@
         const deliveryCost = parseInt(wilayaSelect.value) || 0;
         const total = productPrice + deliveryCost;
 
-        // تحديث سعر التوصيل والسعر الإجمالي أمام الزبون مباشرة
         document.getElementById('deliveryCost').innerText = deliveryCost + " DA";
         document.getElementById('finalPrice').innerText = total.toLocaleString() + " DA";
     }
 
     function handleOrder() {
         const name = document.getElementById('fullName').value;
-        const phone = document.getElementById('phone').value;
         const wilayaText = document.getElementById('wilaya').options[document.getElementById('wilaya').selectedIndex].text;
         const commune = document.getElementById('commune').value;
         const total = document.getElementById('finalPrice').innerText;
@@ -104,3 +223,6 @@
         alert(`شكراً لك يا ${name}! تم استلام طلبك بنجاح.\nالولاية: ${wilayaText}\nالبلدية: ${commune}\nالمجموع: ${total}`);
     }
 </script>
+
+</body>
+</html>
